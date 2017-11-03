@@ -1,0 +1,26 @@
+EntityBundle\Entity\Portfolio:
+    type: entity
+    table: portfolio
+    repositoryClass: EntityBundle\Repository\PortfolioRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titulo:
+            type: string
+            length: 255
+        categoria:
+            type: string
+            length: 255
+        fecha:
+            type: datetime
+            
+    oneToMany:
+        imagenes:
+            targetEntity: Imagenes
+            mappedBy: portfolio
+
+    lifecycleCallbacks: {  }

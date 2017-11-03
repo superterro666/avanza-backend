@@ -1,0 +1,25 @@
+set_blog:
+    path: /set/blog
+    defaults: { _controller: AppBundle:Blog:setBlog }
+    methods: [POST]
+    
+update_blog:
+    path: /update/blog
+    defaults: { _controller: AppBundle:Blog:updateBlog }
+    methods: [PUT]
+    
+delete_blog:
+    path: /delete/blog/{id}{token}
+    defaults: { _controller: AppBundle:Blog:deleteBlog, id:null, token:null }
+    methods: [DELETE]
+
+view_blog:
+    path: /view/blog/{id}/{token}
+    defaults: { _controller: AppBundle:Blog:viewBlog, id:null, token:null }
+    methods: [GET]
+
+views_blog:
+    path:   /views/blog/{token}
+    defaults: { _controller: AppBundle:Blog:viewsBlog, token:null }
+    methods: [GET]
+    

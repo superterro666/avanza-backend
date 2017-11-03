@@ -1,0 +1,23 @@
+EntityBundle\Entity\BlogImagen:
+    type: entity
+    table: null
+    repositoryClass: EntityBundle\Repository\BlogImagenRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        url:
+            type: string
+            length: 255
+            
+    manyToOne:
+        blog:
+            targetEntity: Blog
+            inversedBy: blog_imagen
+            joinColumn:
+                name: id_blog
+                referenecedColumnName: id
+    lifecycleCallbacks: {  }

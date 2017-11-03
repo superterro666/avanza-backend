@@ -1,0 +1,25 @@
+set_portfolio:
+    path: /set/portfolio
+    defaults: { _controller: AppBundle:Portfolio:setPortfolio }
+    methods: [POST]
+    
+update_portfolio:
+    path: /update/portfolio
+    defaults: { _controller: AppBundle:Portfolio:updatePortfolio }
+    methods: [PUT]
+    
+delete_portfolio:
+    path: /delete/portfolio/{id}/{token}
+    defaults: { _controller: AppBundle:Portfolio:deletePortfolio, id:null, token:null }
+    methods: [DELETE]
+
+view_portfolio:
+    path: /view/portfolio/{id}/{token}
+    defaults: { _controller: AppBundle:Portfolio:viewPortfolio, id:null, token:null }
+    methods: [GET]
+
+views_portfolio:
+    path:   /views/portfolio
+    defaults: { _controller: AppBundle:Portfolio:viewsPortfolio }
+    methods: [GET]
+    

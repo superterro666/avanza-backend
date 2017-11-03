@@ -1,0 +1,13 @@
+app_bundle_auth:
+    resource: "@AppBundle/Resources/config/routing/auth.yml"
+    prefix: /
+    
+app_bundle_blog:
+    resource: "@AppBundle/Resources/config/routing/blog.yml"
+    prefix: /
+    
+app_bundle_portfolio:
+    resource: "@AppBundle/Resources/config/routing/portfolio.yml"
+    prefix: /
+    
+    
