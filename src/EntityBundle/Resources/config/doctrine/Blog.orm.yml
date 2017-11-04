@@ -17,8 +17,10 @@ EntityBundle\Entity\Blog:
         fecha:
             type: datetime
             
-    oneToMany:
-        blog_imagen:
-            targetEntity: BlogImagen
-            mappedBy: blog
+        imagen:
+            type: string
+            length: 255
+            nullable: true
+            
+    
     lifecycleCallbacks: {  }

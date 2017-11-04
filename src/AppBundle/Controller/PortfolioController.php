@@ -24,14 +24,15 @@ class PortfolioController extends Controller {
                     $em = $this->getDoctrine()->getManager();
 
                     $portfolio = new Portfolio();
-                     $portfolio->setFecha(new \DateTime());
-                     $portfolio->setTitulo($titulo);
+                    $portfolio->setFecha(new \DateTime());
+                    $portfolio->setTitulo($titulo);
                     $portfolio->setCategoria($categoria);
+                    $portfolio->setImagen(null);
 
                     $em->persist($portfolio);
                     $em->flush();
 
-                    $dql = "SELECT b.titulo, b.categoria, b.id FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
+                    $dql = "SELECT b.titulo, b.categoria, b.id, b.imagen  FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
 
                     $query = $em->createQuery($dql);
                     $result = $query->getResult();
@@ -72,7 +73,7 @@ class PortfolioController extends Controller {
                     $em->persist($portfolio);
                     $em->flush();
 
-                    $dql = "SELECT b.titulo, b.categoria, b.id FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
+                    $dql = "SELECT b.titulo, b.categoria, b.id, b.imagen  FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
 
                     $query = $em->createQuery($dql);
                     $result = $query->getResult();
@@ -102,7 +103,7 @@ class PortfolioController extends Controller {
 
                         $em->remove($portfolio);
                         $em->flush();
-                        $dql = "SELECT b.titulo, b.categoria, b.id FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
+                        $dql = "SELECT b.titulo, b.categoria, b.id, b.imagen  FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
 
                         $query = $em->createQuery($dql);
                         $result = $query->getResult();
@@ -125,7 +126,7 @@ class PortfolioController extends Controller {
             $id = $request->query->get('id') ?? false;
             if ($id) {
                 $em = $this->getDoctrine()->getManager();
-                $dql = "SELECT b.titulo, b.categoria, b.id FROM EntityBundle:Portfolio b WHERE b.id =:id";
+                $dql = "SELECT b.titulo, b.categoria, b.id , b.imagen FROM EntityBundle:Portfolio b WHERE b.id =:id";
                 try {
                     $query = $em->createQuery($dql)->setParameter('id', $id);
                     $result = $query->getOneOrNullResult();
@@ -145,7 +146,7 @@ class PortfolioController extends Controller {
         $error = $this->get('error.service');
         if ($error->parseGet($request)) {
             $em = $this->getDoctrine()->getManager();
-            $dql = "SELECT b.titulo, b.categoria, b.id FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
+            $dql = "SELECT b.titulo, b.categoria, b.id, b.imagen FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
             try {
                 $query = $em->createQuery($dql);
                 $result = $query->getResult();
@@ -156,6 +157,40 @@ class PortfolioController extends Controller {
             }
         }
         return new JsonResponse($error->tokenError());
+    }
+    
+    public function uploadPortfolioAction(Request $request){
+      $error = $this->get('error.service');
+      $json = $error->parsePost($request); 
+      
+      $files =   $request->files->get('imagen');
+      $id = $request->get('id') ?? false;
+      
+       if(!empty($files) || $files != null || !$id){
+           
+            $em = $this->getDoctrine()->getManager();
+            
+            $ext = $files->guessExtension();
+            $file_name = time().'.'.$ext;
+            $files->move('../uploads/', $file_name);
+            
+            try{
+                $img_portfolio = $em->getRepository("EntityBundle:Portfolio")->find($id);
+                $img_portfolio->setImagen($file_name);
+                $em->persist($img_portfolio);
+                $em->flush();
+                
+            }catch(\Doctrine\DBAL\Exception $e){
+                return new JsonResponse($error->dbError($e));
+            }
+            
+            
+            return new JsonResponse($file_name);
+            
+       }else{
+           
+           return new JsonResponse($error->dataError($id));
+       }      
     }
 
 

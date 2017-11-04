@@ -155,4 +155,33 @@ class Blog
     {
         return $this->blog_imagen;
     }
+    /**
+     * @var string
+     */
+    private $imagen;
+
+
+    /**
+     * Set imagen
+     *
+     * @param string $imagen
+     *
+     * @return Blog
+     */
+    public function setImagen($imagen)
+    {
+        $this->imagen = $imagen;
+
+        return $this;
+    }
+
+    /**
+     * Get imagen
+     *
+     * @return string
+     */
+    public function getImagen()
+    {
+        return $this->imagen;
+    }
 }

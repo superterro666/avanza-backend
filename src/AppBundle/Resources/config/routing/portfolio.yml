@@ -23,3 +23,8 @@ views_portfolio:
     defaults: { _controller: AppBundle:Portfolio:viewsPortfolio }
     methods: [GET]
     
+upload_portfolio:
+    path: /upload/portfolio
+    defaults: { _controller: AppBundle:Portfolio:uploadPortfolio }
+    methods: [POST]
+    

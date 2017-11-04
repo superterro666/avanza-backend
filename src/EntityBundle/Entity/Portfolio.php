@@ -242,4 +242,33 @@ class Portfolio
     {
         return $this->categoria;
     }
+    /**
+     * @var string
+     */
+    private $imagen;
+
+
+    /**
+     * Set imagen
+     *
+     * @param string $imagen
+     *
+     * @return Portfolio
+     */
+    public function setImagen($imagen)
+    {
+        $this->imagen = $imagen;
+
+        return $this;
+    }
+
+    /**
+     * Get imagen
+     *
+     * @return string
+     */
+    public function getImagen()
+    {
+        return $this->imagen;
+    }
 }

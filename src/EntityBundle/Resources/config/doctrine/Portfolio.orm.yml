@@ -17,10 +17,11 @@ EntityBundle\Entity\Portfolio:
             length: 255
         fecha:
             type: datetime
-            
-    oneToMany:
-        imagenes:
-            targetEntity: Imagenes
-            mappedBy: portfolio
+        
+        imagen:
+            type: string
+            length: 255
+            nullable: true
+    
 
     lifecycleCallbacks: {  }

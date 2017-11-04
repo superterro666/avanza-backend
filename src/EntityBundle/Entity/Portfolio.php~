@@ -184,4 +184,91 @@ class Portfolio
     {
         return $this->imagenes;
     }
+    /**
+     * @var string
+     */
+    private $titulo;
+
+    /**
+     * @var string
+     */
+    private $categoria;
+
+
+    /**
+     * Set titulo
+     *
+     * @param string $titulo
+     *
+     * @return Portfolio
+     */
+    public function setTitulo($titulo)
+    {
+        $this->titulo = $titulo;
+
+        return $this;
+    }
+
+    /**
+     * Get titulo
+     *
+     * @return string
+     */
+    public function getTitulo()
+    {
+        return $this->titulo;
+    }
+
+    /**
+     * Set categoria
+     *
+     * @param string $categoria
+     *
+     * @return Portfolio
+     */
+    public function setCategoria($categoria)
+    {
+        $this->categoria = $categoria;
+
+        return $this;
+    }
+
+    /**
+     * Get categoria
+     *
+     * @return string
+     */
+    public function getCategoria()
+    {
+        return $this->categoria;
+    }
+    /**
+     * @var string
+     */
+    private $imagen;
+
+
+    /**
+     * Set imagen
+     *
+     * @param string $imagen
+     *
+     * @return Portfolio
+     */
+    public function setImagen($imagen)
+    {
+        $this->imagen = $imagen;
+
+        return $this;
+    }
+
+    /**
+     * Get imagen
+     *
+     * @return string
+     */
+    public function getImagen()
+    {
+        return $this->imagen;
+    }
 }
