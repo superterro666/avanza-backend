@@ -156,5 +156,40 @@ class BlogController extends Controller {
         }
         return new JsonResponse($error->tokenError());
     }
+    
+      
+    public function uploadBlogAction(Request $request){
+      $error = $this->get('error.service');
+      $json = $error->parsePost($request); 
+      
+      $files =   $request->files->get('imagen');
+      $id = $request->get('id') ?? false;
+      
+       if(!empty($files) || $files != null || !$id){
+           
+            $em = $this->getDoctrine()->getManager();
+            
+            $ext = $files->guessExtension();
+            $file_name = time().'.'.$ext;
+            $files->move('../uploads/', $file_name);
+            
+            try{
+                $img_blog = $em->getRepository("EntityBundle:Blog")->find($id);
+                $img_blog->setImagen($file_name);
+                $em->persist($img_blog);
+                $em->flush();
+                
+            }catch(\Doctrine\DBAL\Exception $e){
+                return new JsonResponse($error->dbError($e));
+            }
+            
+            
+            return new JsonResponse($file_name);
+            
+       }else{
+           
+           return new JsonResponse($error->dataError($id));
+       }      
+    }
 
 }

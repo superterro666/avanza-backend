@@ -23,3 +23,8 @@ views_blog:
     defaults: { _controller: AppBundle:Blog:viewsBlog, token:null }
     methods: [GET]
     
+upload_blog:
+    path: /upload/blog
+    defaults: { _controller: AppBundle:Blog:uploadBlog }
+    methods: [POST]
+    
