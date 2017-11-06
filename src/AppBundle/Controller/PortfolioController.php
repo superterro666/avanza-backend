@@ -161,6 +161,8 @@ class PortfolioController extends Controller {
     
     public function uploadPortfolioAction(Request $request){
       $error = $this->get('error.service');
+      $fileTask = $this->get('file.task.service');
+      $image = $this->get('app.api.simpleimage');
       $json = $error->parsePost($request); 
       
       $files =   $request->files->get('imagen');
@@ -169,14 +171,15 @@ class PortfolioController extends Controller {
        if(!empty($files) || $files != null || !$id){
            
             $em = $this->getDoctrine()->getManager();
-            
-            $ext = $files->guessExtension();
-            $file_name = time().'.'.$ext;
-            $files->move('../uploads/', $file_name);
+            $url = 'uploads/images/';
+            $img = $fileTask->getExtension($files, $url);
+            $image->load( $url. $img);
+            $image->resize(330, 330);
+            $image->save($url . $img);
             
             try{
                 $img_portfolio = $em->getRepository("EntityBundle:Portfolio")->find($id);
-                $img_portfolio->setImagen($file_name);
+                $img_portfolio->setImagen($img);
                 $em->persist($img_portfolio);
                 $em->flush();
                 
@@ -185,7 +188,7 @@ class PortfolioController extends Controller {
             }
             
             
-            return new JsonResponse($file_name);
+            return new JsonResponse($img);
             
        }else{
            

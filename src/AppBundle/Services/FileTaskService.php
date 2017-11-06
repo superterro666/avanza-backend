@@ -26,18 +26,18 @@ class FileTaskService {
        
     }
 
-    public function getExtension($file, $user) {
+    public function getExtension($file) {
 
         $ext = $file->guessExtension();
 
         if ($ext == 'jpg' || $ext == 'jpeg' || $ext == 'png' || $ext == 'gif') {
 
 
-            return $this->setImage($file,$ext,$user);
+            return $this->setImage($file,$ext);
             
         } else if ($ext == 'pdf') {
 
-            return $this->setFile($file,$ext,$user);
+            return $this->setFile($file,$ext);
             
         } else {
 
@@ -46,18 +46,18 @@ class FileTaskService {
         }
     }
 
-    private function setImage($file, $ext,$user) {
+    private function setImage($file, $ext) {
 
 
-        $file_name = $user . time() . "." . $ext;
+        $file_name = time() . "." . $ext;
         $file->move("uploads/images", $file_name);
        
         return $file_name;
     }
 
-    private function setFile($file, $ext,$user) {
+    private function setFile($file, $ext) {
 
-        $file_name = $user . time() . "." . $ext;
+        $file_name = time() . "." . $ext;
         $file->move("uploads/documents", $file_name);
        
         return $file_name;

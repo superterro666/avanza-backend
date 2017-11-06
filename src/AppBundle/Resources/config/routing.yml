@@ -10,4 +10,8 @@ app_bundle_portfolio:
     resource: "@AppBundle/Resources/config/routing/portfolio.yml"
     prefix: /
     
+app_bundle_home:
+    resource: "@AppBundle/Resources/config/routing/home.yml"
+    prefix: /
+    
     
