@@ -20,7 +20,7 @@
 	div.pp_default .pp_top .pp_right { background: url(../img/prettyPhoto/default/sprite.html) -112px -93px no-repeat; } /* Top right corner */
 	
 	div.pp_default .pp_content .ppt { color: #f8f8f8; }
-	div.pp_default .pp_content_container .pp_left { background: url(../img/prettyPhoto/default/sprite_y.html) -7px 0 repeat-y; padding-left: 13px; }
+	div.pp_default .pp_content_container .pp_left { background: url(../img/prettyPhoto/default/sprite_y.html) -7px 0 repeat-y; padding-left: 15px; }
 	div.pp_default .pp_content_container .pp_right { background: url(../img/prettyPhoto/default/sprite_y.html) top right repeat-y; padding-right: 13px; }
 	div.pp_default .pp_content { background-color: #fff; } /* Content background */
 	div.pp_default .pp_next:hover { background: url(../img/prettyPhoto/default/sprite_next.html) center right  no-repeat; cursor: pointer; } /* Next button */
