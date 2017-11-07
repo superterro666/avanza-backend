@@ -47,16 +47,26 @@ class HomeController extends Controller {
          return $this->render(':default:view_contacto.html.twig', array('contacto'=>$contacto));
         
    }
-
+     $blogs = $this->getBlogs();
+     $portfolios = $this->getPortfolio();
+     
      return $this->render(':default:index.html.twig', array(
-       'form' => $form->createView()));
+       'form' => $form->createView(),'principal'=>true, 'blogs'=>$blogs, 'portfolios'=>$portfolios));
  }
  
  
  
- private function getBlogs(){}
+ private function getBlogs(){
+     $em = $this->getDoctrine()->getManager();
+     $blogs = $em->getRepository('EntityBundle:Blog')->findAll();
+     return $blogs;
+ }
  
- private function getPortfolio(){}
+ private function getPortfolio(){
+     $em = $this->getDoctrine()->getManager();
+     $portfolio = $em->getRepository('EntityBundle:Portfolio')->findAll();
+     return $portfolio;
+ }
  
 
     

@@ -60,16 +60,16 @@
             </div>
             <div class="navbar-collapse collapse">
                 <nav>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a class="page-scroll" href="#home">Inicio</a></li>
-                        <li><a class="page-scroll" href="#about">Nosotros</a></li>
-                        <li><a class="page-scroll" href="#service">Servicios</a></li>
-                        <li><a class="page-scroll" href="#why_us">Porque Nosotros?</a></li>
-                        <li><a class="page-scroll" href="#portfolio">Portafolio</a></li>
-                        <li><a class="page-scroll" href="#team">Equipo</a></li>						
-                        <li><a class="page-scroll" href="#blog">Blog</a></li>							
-                        <!-- <li><a class="page-scroll" href="#pricing">Pricing</a></li> -->
-                        <li><a class="page-scroll" href="#contact">Contactenos</a></li>
+                    
+                    <ul class="nav navbar-nav navbar-right" >
+                        <li><a class="page-scroll" href="{% if principal is defined %} #home {% else %} {{ path( 'home', {'_fragment': 'home'}) }} {%endif%}">Inicio</a></li>
+                        <li><a class="page-scroll" href="{% if principal is defined%} #about {% else %} {{ path( 'home', {'_fragment': 'about'}) }} {%endif%}">Nosotros</a></li>
+                        <li><a class="page-scroll" href={% if principal is defined%} #service {%else%} {{ path( 'home', {'_fragment': 'service'}) }} {%endif%}>Servicios</a></li>
+                        <li><a class="page-scroll" href="{% if principal is defined%} #why_us {%else%} {{ path( 'home', {'_fragment': 'why_us'}) }} {%endif%}">Porque Nosotros?</a></li>
+                        <li><a class="page-scroll" href="{% if principal is defined%} #portfolio {%else%} {{ path( 'home', {'_fragment': 'portfolio'}) }} {%endif%}">Portafolio</a></li>
+                        <li><a class="page-scroll" href="{% if principal is defined%} #team {%else%} {{ path( 'home', {'_fragment': 'team'}) }} {%endif%}">Equipo</a></li>						
+                        <li><a class="page-scroll" href="{% if principal is defined%} #blog {%else%} {{ path( 'home', {'_fragment': 'blog'}) }} {%endif%}">Blog</a></li>							
+                        <li><a class="page-scroll" href="{% if principal is defined%} #contact {%else%} {{ path( 'home', {'_fragment': 'contact'}) }} {%endif%}">Contactenos</a></li>
                     </ul>
                 </nav>
             </div> 
