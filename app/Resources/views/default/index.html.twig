@@ -1,876 +1,828 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-   	<div class="preloader">
-			<div class="status">
-				<div class="status-mes"><h4>Avanza</h4></div>
-			</div>
-		</div>
-		<!-- END PRELOADER -->
-		
-		<!-- START NAVBAR -->
-		<div class="navbar navbar-default navbar-fixed-top menu-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-					<a href="index_slider.html" class="navbar-brand"><img src="assets/img/logoAblucorto.png" alt="logo"></a>
+  
+     <!-- START SLIDER -->
+    <section id="home" class="home_video slider" style="background-image: url({{ asset('assets/img/bg/desarrolloapp2.jpg') }});background-size:cover; background-position: center center;background-attachment:fixed;">
+        <div class="container">
+            <div class="row">	
+                <div class="col-md-10 col-md-offset-1">
+                    <div id="team__carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#team__carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#team__carousel" data-slide-to="1"></li>
+                            <li data-target="#team__carousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner text-center">							
+                            <!-- Item 1 -->
+                            <div class="item active">
+                                <div class="cover-container">
+                                    <div class="hero-text">
+                                        <h2>Desarrollo de software a medida</h2>
+                                        <p>Desarrollo de aplicaciones para PC, aplicaciones Web, aplicaciones móviles...</p>
+                                        <a data-scroll class="btn btn-default btn-light-bg page-scroll" href="#contact">Contáctenos</a>
+                                        <!-- <a data-scroll class="btn btn-default btn-light-bg-two page-scroll" href="#">Purchase now</a> -->
+                                    </div> 
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="item">
+                                <div class="cover-container">							 
+                                    <div class="hero-text">
+                                        <h2>Moderniza tu empresa</h2>
+                                        <p>Diseño de Imagen Corporativa, Web, Marketing, posicionamiento SEO...</p>
+                                        <a data-scroll class="btn btn-default btn-light-bg page-scroll" href="#contact">Contáctenos</a>
+                                        <!-- <a data-scroll class="btn btn-default btn-light-bg-two page-scroll" href="#">Purchase now</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="item">
+                                <div class="cover-container">							 
+                                    <div class="hero-text">
+                                        <h2>Hardware y Redes</h2>
+                                        <p>Asesoramiento, instalación, configuración y mantenimiento de terminales, componentes, redes y servidores.</p>
+                                        <a data-scroll class="btn btn-default btn-light-bg page-scroll" href="#contact">Contáctenos</a>
+                                        <!-- <a data-scroll class="btn btn-default btn-light-bg-two page-scroll" href="#">Purchase now</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </section>
+    <!-- END SLIDER -->
+
+    <!-- START ABOUT US -->
+    <section id="about" class="about_us section-padding">
+        <div class="container">
+            <div class="row ">
+                <div class="section-title text-center wow zoomIn">
+                    <h2>Somos Avanza</h2>						
+                    <span></span>
+                    <p>Consultoría dedicada a la prestación de servicios y asesoramiento informático,<br>formada por un equipo de profesionales con amplia experiencia y amplia formación en ultimas tecnologías</p>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <nav>
-						<ul class="nav navbar-nav navbar-right">
-							<li><a class="page-scroll" href="#home">Inicio</a></li>
-							<li><a class="page-scroll" href="#about">Nosotros</a></li>
-							<li><a class="page-scroll" href="#service">Servicios</a></li>
-							<li><a class="page-scroll" href="#why_us">Porque Nosotros?</a></li>
-							<li><a class="page-scroll" href="#portfolio">Portafolio</a></li>
-							<li><a class="page-scroll" href="#team">Equipo</a></li>						
-							<li><a class="page-scroll" href="#blog">Blog</a></li>							
-							<!-- <li><a class="page-scroll" href="#pricing">Pricing</a></li> -->
-							<li><a class="page-scroll" href="#contact">Contactenos</a></li>
-						</ul>
-					</nav>
-                </div> 
-            </div><!--- END CONTAINER -->
-        </div> 
-		<!-- END NAVBAR -->	
-	
-		<!-- START SLIDER -->
-		<section id="home" class="home_video slider" style="background-image: url(assets/img/bg/desarrolloapp2.jpg);background-size:cover; background-position: center center;background-attachment:fixed;">
-			<div class="container">
-				<div class="row">	
-					<div class="col-md-10 col-md-offset-1">
-						<div id="team__carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-							<!-- Indicators -->
-							<ol class="carousel-indicators">
-							  <li data-target="#team__carousel" data-slide-to="0" class="active"></li>
-							  <li data-target="#team__carousel" data-slide-to="1"></li>
-							  <li data-target="#team__carousel" data-slide-to="2"></li>
-							</ol>
-							<!-- Wrapper for slides -->
-							<div class="carousel-inner text-center">							
-							  <!-- Item 1 -->
-							  <div class="item active">
-								<div class="cover-container">
-									<div class="hero-text">
-									  <h2>Desarrollo de software a medida</h2>
-									  <p>Desarrollo de aplicaciones para PC, aplicaciones Web, aplicaciones móviles...</p>
-									  <a data-scroll class="btn btn-default btn-light-bg page-scroll" href="#contact">Contáctenos</a>
-									  <!-- <a data-scroll class="btn btn-default btn-light-bg-two page-scroll" href="#">Purchase now</a> -->
-									</div> 
-								</div>
-							   </div>
-							  <!-- Item 2 -->
-							  <div class="item">
-								<div class="cover-container">							 
-									<div class="hero-text">
-									  <h2>Moderniza tu empresa</h2>
-									  <p>Diseño de Imagen Corporativa, Web, Marketing, posicionamiento SEO...</p>
-									  <a data-scroll class="btn btn-default btn-light-bg page-scroll" href="#contact">Contáctenos</a>
-									  <!-- <a data-scroll class="btn btn-default btn-light-bg-two page-scroll" href="#">Purchase now</a> -->
-									</div>
-								</div>
-							   </div>
-							   <!-- Item 3 -->
-							  <div class="item">
-								<div class="cover-container">							 
-									<div class="hero-text">
-									  <h2>Hardware y Redes</h2>
-									  <p>Asesoramiento, instalación, configuración y mantenimiento de terminales, componentes, redes y servidores.</p>
-									  <a data-scroll class="btn btn-default btn-light-bg page-scroll" href="#contact">Contáctenos</a>
-									  <!-- <a data-scroll class="btn btn-default btn-light-bg-two page-scroll" href="#">Purchase now</a> -->
-									</div>
-								</div>
-							   </div>
-							</div>
-						</div>
-					</div><!--- END COL -->
-				</div><!--- END ROW -->
-			</div><!--- END CONTAINER -->
-		</section>
-		<!-- END SLIDER -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="about_single wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                        <h4><span></span> Software</h4>
+                        <span></span>
+                        <p>Posiciona tu empresa en la era informática con software a medida de tus necesidades.</p>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="about_single wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                        <h4><span></span> Hardware</h4>
+                        <span></span>
+                        <p>Disponemos de equipos y componentes a la medida de tus necesidades con total asesoramiento y el mejor mantenimiento.</p>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="about_single wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                        <h4><span></span> Redes</h4>
+                        <span></span>
+                        <p>Instalación y mantenimiento de redes y servidores.</p>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </section>
+    <!-- END ABOUT US -->		
 
-		<!-- START ABOUT US -->
-		<section id="about" class="about_us section-padding">
-			<div class="container">
-				<div class="row ">
-					<div class="section-title text-center wow zoomIn">
-						<h2>Somos Avanza</h2>						
-						<span></span>
-						<p>Consultoría dedicada a la prestación de servicios y asesoramiento informático,<br>formada por un equipo de profesionales con amplia experiencia y amplia formación en ultimas tecnologías</p>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="about_single wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-							<h4><span></span> Software</h4>
-							<span></span>
-							<p>Posiciona tu empresa en la era informática con software a medida de tus necesidades.</p>
-						</div>
-					</div><!--- END COL -->
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="about_single wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-							<h4><span></span> Hardware</h4>
-							<span></span>
-							<p>Disponemos de equipos y componentes a la medida de tus necesidades con total asesoramiento y el mejor mantenimiento.</p>
-						</div>
-					</div><!--- END COL -->
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="about_single wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-							<h4><span></span> Redes</h4>
-							<span></span>
-							<p>Instalación y mantenimiento de redes y servidores.</p>
-						</div>
-					</div><!--- END COL -->
-				</div><!--- END ROW -->
-			</div><!--- END CONTAINER -->
-		</section>
-		<!-- END ABOUT US -->		
+    <!-- START WHY CHOOSE US -->
+    <section class="why_choose_us section-padding" style="background-image: url({{ asset('assets/img/bg/redes.jpg') }});  background-size:cover; background-position: center center;background-attachment:fixed;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+                    <div id="why_choose" class="carousel slide" data-ride="carousel" data-interval="5000">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#why_choose" data-slide-to="0" class="active"></li>
+                            <li data-target="#why_choose" data-slide-to="1"></li>
+                            <li data-target="#why_choose" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner text-center">								
+                            <div class="item active">
+                                <div class="single_feature">
+                                    <i class="fa fa-diamond"></i>
+                                    <h3>Nuestra Misión</h3>
+                                    <span></span>
+                                    <p>Ofrecer todos los servicios informáticos y la asisténcia técnica que responda a las necesidades actuales y futuras de nuestros clientes.</p>	
+                                </div>
+                            </div><!-- END ITEM ACTIVE -->							
+                            <div class="item">
+                                <div class="single_feature">
+                                    <i class="fa fa-lightbulb-o"></i>
+                                    <h3>Nuestra Visión</h3>
+                                    <span></span>
+                                    <p>Ofrecer el mejor servicio en base a una formación permanente de nuestro equipo, manteniendo un buen entorno de trabajo.</p>	
+                                </div>
+                            </div><!-- END ITEM 2 -->						
+                            <div class="item">
+                                <div class="single_feature">
+                                    <i class="fa fa-paper-plane-o"></i>
+                                    <h3>Nuestra Historia</h3>
+                                    <span></span>
+                                    <p>Nuestro equipo nace de la colaboración de formadores y alumnos del CFP Progresa.</p>
+                                </div>
+                            </div><!-- END ITEM 3 -->
+                        </div><!-- END CAROUSEL INNER -->
+                    </div><!-- END CAROUSEL SLIDE -->				
+                </div><!--- END COL -->	
+            </div><!--- END ROW -->
+            <div class="row counter_feature">
+                <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <div class="counter">
+                        <div class="counter_icon"><i class="fa fa-smile-o"></i></div>
+                        <h2 class="timer"> 356</h2>                    
+                        <p>Clientes contentos</p>
+                    </div>
+                </div> <!--- END COL -->   
+                <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <div class="counter">
+                        <div class="counter_icon"><i class="fa fa-trophy"></i></div>
+                        <h2 class="timer"> 0 </h2>                    
+                        <p>Premios Ganados</p>
+                    </div>
+                </div><!--- END COL -->   
+                <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <div class="counter">
+                        <div class="counter_icon"><i class="fa fa-download"></i></div>
+                        <h2 class="timer"> 8530</h2>                    
+                        <p>Proyectos Completados</p>
+                    </div>
+                </div> <!--- END COL --> 
+                <!-- <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                        <div class="counter">
+                                <div class="counter_icon"><i class="fa fa-envelope-o"></i></div>
+                                <h2 class="timer">2148</h2>                    
+                                <p>business operation</p>
+                         </div>
+                </div> - END COL-->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->		
+    </section>
+    <!-- END WHY CHOOSE US -->
 
-		<!-- START WHY CHOOSE US -->
-		<section class="why_choose_us section-padding" style="background-image: url(assets/img/bg/redes.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
-						<div id="why_choose" class="carousel slide" data-ride="carousel" data-interval="5000">
-							<!-- Indicators -->
-							<ol class="carousel-indicators">
-							  <li data-target="#why_choose" data-slide-to="0" class="active"></li>
-							  <li data-target="#why_choose" data-slide-to="1"></li>
-							  <li data-target="#why_choose" data-slide-to="2"></li>
-							</ol>
-							<!-- Wrapper for slides -->
-							<div class="carousel-inner text-center">								
-								<div class="item active">
-									<div class="single_feature">
-										<i class="fa fa-diamond"></i>
-										<h3>Nuestra Misión</h3>
-										<span></span>
-										<p>Ofrecer todos los servicios informáticos y la asisténcia técnica que responda a las necesidades actuales y futuras de nuestros clientes.</p>	
-									</div>
-								</div><!-- END ITEM ACTIVE -->							
-								<div class="item">
-									<div class="single_feature">
-										<i class="fa fa-lightbulb-o"></i>
-										<h3>Nuestra Visión</h3>
-										<span></span>
-										<p>Ofrecer el mejor servicio en base a una formación permanente de nuestro equipo, manteniendo un buen entorno de trabajo.</p>	
-									</div>
-								</div><!-- END ITEM 2 -->						
-								<div class="item">
-									<div class="single_feature">
-										<i class="fa fa-paper-plane-o"></i>
-										<h3>Nuestra Historia</h3>
-										<span></span>
-										<p>Nuestro equipo nace de la colaboración de formadores y alumnos del CFP Progresa.</p>
-									</div>
-								</div><!-- END ITEM 3 -->
-							</div><!-- END CAROUSEL INNER -->
-						</div><!-- END CAROUSEL SLIDE -->				
-					</div><!--- END COL -->	
-				</div><!--- END ROW -->
-				<div class="row counter_feature">
-					<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="counter">
-							<div class="counter_icon"><i class="fa fa-smile-o"></i></div>
-							<h2 class="timer"> 356</h2>                    
-							<p>Clientes contentos</p>
-						</div>
-					</div> <!--- END COL -->   
-					<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="counter">
-							<div class="counter_icon"><i class="fa fa-trophy"></i></div>
-							<h2 class="timer"> 0 </h2>                    
-							<p>Premios Ganados</p>
-						</div>
-					</div><!--- END COL -->   
-					<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="counter">
-							<div class="counter_icon"><i class="fa fa-download"></i></div>
-							<h2 class="timer"> 8530</h2>                    
-							<p>Proyectos Completados</p>
-						 </div>
-					</div> <!--- END COL --> 
-					<!-- <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="counter">
-							<div class="counter_icon"><i class="fa fa-envelope-o"></i></div>
-							<h2 class="timer">2148</h2>                    
-							<p>business operation</p>
-						 </div>
-					</div> - END COL-->
-				</div><!--- END ROW -->
-			</div><!--- END CONTAINER -->		
-		</section>
-		<!-- END WHY CHOOSE US -->
+    <!-- START SERVICE  -->
+    <section id="service" class="our_service section-padding">
+        <div class="container">
+            <div class="row text-center">
+                <div class="section-title wow zoomIn">
+                    <h2>Servicios Avanza</h2>
+                    <span></span>
+                    <p>Solución integra para las necesidades informaticas de nuestros clientes,<br>facilitando y agilizando la proyección, gestión interna y comunicación de nuestros clientes.</p>
+                </div>
 
-		<!-- START SERVICE  -->
-		<section id="service" class="our_service section-padding">
-			<div class="container">
-				<div class="row text-center">
-					<div class="section-title wow zoomIn">
-						<h2>Servicios Avanza</h2>
-						<span></span>
-						<p>Solución integra para las necesidades informaticas de nuestros clientes,<br>facilitando y agilizando la proyección, gestión interna y comunicación de nuestros clientes.</p>
-					</div>
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <div class="single_service">
+                        <i class="fa fa-laptop"></i>
+                        <h4>Software Personalizado</h4>
+                        <p>Desarrollo de software a medida, para PC, aplicaciones mono-usuario, multi-usuario, cliente-servidor, aplicaciones web, entornos de escritorio, etc</p>
+                    </div>
+                </div><!--END COL -->
 
-					<div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="single_service">
-							<i class="fa fa-laptop"></i>
-							<h4>Software Personalizado</h4>
-							<p>Desarrollo de software a medida, para PC, aplicaciones mono-usuario, multi-usuario, cliente-servidor, aplicaciones web, entornos de escritorio, etc</p>
-						</div>
-					</div><!--END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <div class="single_service">
+                        <i class="fa fa-mobile"></i>
+                        <h4>App's Empresariales</h4>
+                        <p>Desarrollo app's, IOS y Android ()</p>Nativas y/o Multiplataforma), gestion de inventario por camara, control de presencia por GPS, posicionamiento móvil, etc.
+                    </div>
+                </div><!--END COL -->
 
-					<div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="single_service">
-							<i class="fa fa-mobile"></i>
-							<h4>App's Empresariales</h4>
-							<p>Desarrollo app's, IOS y Android ()</p>Nativas y/o Multiplataforma), gestion de inventario por camara, control de presencia por GPS, posicionamiento móvil, etc.
-						</div>
-					</div><!--END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <div class="single_service">
+                        <i class="fa fa-male"></i>
+                        <h4>Control de Presencia</h4>
+                        <p>Instalación y configuración de servicios de control de presencia, asi como adaptación del hardware necesario para el control mediante NFC, huella, etc.</p>
+                    </div>
+                </div><!--END COL -->
 
-					<div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="single_service">
-							<i class="fa fa-male"></i>
-							<h4>Control de Presencia</h4>
-							<p>Instalación y configuración de servicios de control de presencia, asi como adaptación del hardware necesario para el control mediante NFC, huella, etc.</p>
-						</div>
-					</div><!--END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <div class="single_service">
+                        <i class="fa fa-briefcase"></i>
+                        <h4>Imagen Corporativa</h4>
+                        <p>Diseño de imagen corporativa, desarrollo Web corporativo y diseño de tarjetas de presentación.</p>
+                    </div>
+                </div><!--END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <div class="single_service">
+                        <i class="fa fa-globe"></i>
+                        <h4>Márketing Digital</h4>
+                        <p>Posicionamiento SEO/SEM, desarrollo de campañas en redes sociales y correo electrónico</p>
+                    </div>
+                </div><!--END COL -->
 
-					<div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="single_service">
-							<i class="fa fa-briefcase"></i>
-							<h4>Imagen Corporativa</h4>
-							<p>Diseño de imagen corporativa, desarrollo Web corporativo y diseño de tarjetas de presentación.</p>
-						</div>
-					</div><!--END COL -->
-					<div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="single_service">
-							<i class="fa fa-globe"></i>
-							<h4>Márketing Digital</h4>
-							<p>Posicionamiento SEO/SEM, desarrollo de campañas en redes sociales y correo electrónico</p>
-						</div>
-					</div><!--END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <div class="single_service">
+                        <i class="fa fa-keyboard-o"></i>
+                        <h4>Hardware</h4>
+                        <p>Venta, distribución e instalación de cualquier hardware necesario para el funcionamiento tecnológico de su empresa, asi como gestion de permisos, etc.</p>
+                    </div>
+                </div><!--END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <div class="single_service">
+                        <i class="fa fa-eye"></i>
+                        <h4>Seguridad y Control</h4>
+                        <p>Instalación de sistemas Hardware de camaras de seguridad, control de presencia y cualquier tipo de periféricos.</p>
+                    </div>
+                </div><!--END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <div class="single_service">
+                        <i class="fa fa-server"></i>
+                        <h4>Redes</h4>
+                        <p>Instalación y mantenimiento de redes de cableado estructuado, así como de servidores Windows Active Directory.</p>
+                    </div>
+                </div><!--END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <div class="single_service">
+                        <i class="fa fa-wrench"></i>
+                        <h4>Soporte Técnico</h4>
+                        <p>Soporte técnico y mantenimiento para clientes y usuarios.</p>
+                    </div>
+                </div><!--END COL -->
 
-					<div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="single_service">
-							<i class="fa fa-keyboard-o"></i>
-							<h4>Hardware</h4>
-							<p>Venta, distribución e instalación de cualquier hardware necesario para el funcionamiento tecnológico de su empresa, asi como gestion de permisos, etc.</p>
-						</div>
-					</div><!--END COL -->
-					<div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="single_service">
-							<i class="fa fa-eye"></i>
-							<h4>Seguridad y Control</h4>
-							<p>Instalación de sistemas Hardware de camaras de seguridad, control de presencia y cualquier tipo de periféricos.</p>
-						</div>
-					</div><!--END COL -->
-					<div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="single_service">
-							<i class="fa fa-server"></i>
-							<h4>Redes</h4>
-							<p>Instalación y mantenimiento de redes de cableado estructuado, así como de servidores Windows Active Directory.</p>
-						</div>
-					</div><!--END COL -->
-					<div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="single_service">
-							<i class="fa fa-wrench"></i>
-							<h4>Soporte Técnico</h4>
-							<p>Soporte técnico y mantenimiento para clientes y usuarios.</p>
-						</div>
-					</div><!--END COL -->
+            </div><!--END  ROW -->
+        </div><!-- END CONTAINER -->
+    </section>
+    <!-- END SERVICE-->		
 
-				</div><!--END  ROW -->
-			</div><!-- END CONTAINER -->
-		</section>
-		<!-- END SERVICE-->		
-
-		<!-- START WHY CHOOSE US --> 
-		<section id="why_us" class="why_choice_us section-padding">			
-			<div class="container">
-				<div class="row">	
-					<div class="section-title text-center wow zoomIn">
-						<h2>Porque elegir avanza</h2>
-						<span></span>
-						<p>Por nuestro compromiso en poner al servicio de nuestros clientes las mejores herramientas informáticas y el mas novedoso software y hardware,<br> así como el mejor trato y colaboración posible.</p>
-					</div>				
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<img src="assets/img/why_img.jpg" class="img-responsive" alt="" />
-					</div><!-- END COL -->						
-					<div class="col-md-8 col-sm-8 col-xs-12">
-						<div class="according-area">
-							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="headingOne">
-										<h4 class="panel-title">
-										<a role="button" data-toggle="collapse" data-target="#collapseOne" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">
-										  Haz crecer tu Negocio
-										</a>
-										</h4>
-									</div>
-									<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-										<div class="panel-body">
-											Situa tu empresa o negocio en la era informatica y de la comunicación con las ultimas herramientas disponibles. Agiliza y haz más fácil la gestión de tu negocio con el mejor software personalizado a tus necesidades.
-										</div>
-									</div>
-								</div><!--- END PANEL -->
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="headingTwo">
-										<h4 class="panel-title">
-										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										  Posibilidades Ilimitadas
-										</a>
-									  </h4>
-									</div>
-									<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-										<div class="panel-body">
-											La informática puede solucionar cualquier problema de tu negocio facilitandotu trabajo, si no exite herramienta que lo solucione, nosotros la crearemos para ti.
-										</div>
-									</div>
-								</div><!--- END PANEL -->
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="headingThree">
-										<h4 class="panel-title">
-										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-										  Software Responsive
-										</a>
-										</h4>
-									</div>
-									<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-										<div class="panel-body">
-											Todo el software que desarrollamos se adapta completamente a todos los dipositivos.
-										</div>
-									</div>
-								</div><!--- END PANEL -->
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="headingfour">
-										<h4 class="panel-title">
-										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-										  Precio Justo
-										</a>
-										</h4>
-									</div>
-									<div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
-										<div class="panel-body">
-											Ajustamos nuestros precios a la calidad de nuestros servicios y a la competencia para ofrecer un precio justo y asequible a nuestros clientes.
-										</div>
-									</div>
-								</div><!--- END PANEL -->
-
-								<!-- <div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="headingfive">
-										<h4 class="panel-title">
-										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
-										  24/7 faster Support
-										</a>
-										</h4>
-									</div>
-									<div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
-										<div class="panel-body">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed elit tortor. Quisque bibendum mauris velit, sed tincidunt massa lacinia nec. Mauris rutrum viverra metus, vel aliquet libero eleifend eu. Sed id tempus libero, vitae porta nisi.
-										</div>
-									</div>
-								</div> -->
-								<!--- END PANEL -->
-
-							</div><!--- END PANEL GROUP-->
-						</div><!--- END ACCORDION AREA -->
-					</div><!-- END COL -->					
-				</div><!-- END ROW -->
-			</div><!-- END CONTAINER -->
-		</section>
-		<!-- END WHY CHOOSE US -->
-		
-		<!-- START PORTFOLIO -->
-		<section id="portfolio" class="our_portfolio section-padding">
-			<div class="container">
-				<!-- PORTFOLIO FILTER BUTTONS -->	
-				<div class="row">	
-					<div class="section-title text-center wow zoomIn">
-						<h2>Trabajos de Avanza</h2>
-						<span></span>
-						<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru<br> exercit ation Lorem ipsum dolor sit amet.Veniam quis notru exercit.</p> -->
-					</div>				
-					<!-- <div class="col-xs-12 text-center">
-						<ul class="portfolio-filters">
-							<li class="filter active" data-filter="all">all</li>
-							<li class="filter" data-filter="graphic">Graphic</li>
-							<li class="filter" data-filter="print">Print</li>
-							<li class="filter" data-filter="webdesign">webdesign</li>
-						</ul>						
-					</div> -->
-					<!-- END COL -->
-				</div><!-- END ROW -->
-				<div class="row">
-					<ul class="portfolio-items-list">
-						<li class="col-md-4 col-sm-6 col-xs-12  portfolio-item print graphic" data-cat="2">
-							<div class="hover-overlay"> 			
-								<img class="img-responsive" src="assets/img/portfolio/1.jpg" alt="Portfolio Image">	
-								<a class="prettyPhoto image_zoom" href="assets/img/portfolio/1.jpg" title="Project Image">
-									<div class="item-overlay">										
-										<div class="overlay-content">
-											<h4 class="small-title">Project Title Here</h4>
-											<h5>Project Category</h5>
-										</div>
-									</div>	  
-								</a>
-							</div>
-						</li><!-- END PORTFOLIO IMAGE -->
-						<li class="col-md-4 col-sm-6 col-xs-12  portfolio-item webdesign" data-cat="2">
-							<div class="hover-overlay"> 			
-								<img class="img-responsive" src="assets/img/portfolio/2.jpg" alt="Portfolio Image">	
-								<a class="prettyPhoto image_zoom" href="assets/img/portfolio/2.jpg" title="Project Image">
-									<div class="item-overlay">										
-										<div class="overlay-content">
-											<h4 class="small-title">Project Title Here</h4>
-											<h5>Project Category</h5>
-										</div>
-									</div>	  
-								</a>
-							</div>
-						</li><!-- END PORTFOLIO IMAGE -->
-						<li class="col-md-4 col-sm-6 col-xs-12  portfolio-item print graphic" data-cat="2">
-							<div class="hover-overlay"> 			
-								<img class="img-responsive" src="assets/img/portfolio/3.jpg" alt="Portfolio Image">	
-								<a class="prettyPhoto image_zoom" href="assets/img/portfolio/3.jpg" title="Project Image">
-									<div class="item-overlay">										
-										<div class="overlay-content">
-											<h4 class="small-title">Project Title Here</h4>
-											<h5>Project Category</h5>
-										</div>
-									</div>	  
-								</a>
-							</div>
-						</li><!-- END PORTFOLIO IMAGE -->	
-					</ul>
-				</div>
-				<!-- END ROW  -->
-				
-				<!-- <div class="portfolio_btn text-center">
-					<a href="#" class="btn btn-default btn-portfolio-bg">See More Work</a>
-				</div> -->
-			</div>
-			<!-- END CONTAINER  -->
-		</section>
-		<!-- END PORTFOLIO -->
-		
-		<!-- START PROMOTION -->
-		<section class="promotions" style="background-image: url(assets/img/bg/programer.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
-						<div class="promotion_content">
-							<h1>Sómos tu mejor Elección</h1>
-							<p>Porque nadie puede permitir que su negocio o empresa quede rezagada ante la competencia, somos tu mejor opción para modernizarte y aumentar tus posibilidades frente a los demás con lo último en software a medida y hardware a un precio asequible.</p>
-							<!-- <a href="#contact">get start</a> -->
-						</div>
-					</div><!-- END COL  -->
-				</div><!-- END ROW  -->
-			</div><!-- END CONTAINER  -->
-		</section>
-		<!-- END PROMOTION -->
-		
-		<!-- START TEAM -->
-		<section id="team" class="our_team section-padding">
-			<div class="container">
-				<div class="row">	
-					<div class="section-title text-center wow zoomIn">
-						<h2>Nuestro Equipo</h2>
-						<span></span>
-						<p>Las nuevas tecnologías evolucionan constantemente asi como nuestro equipo de profesionales,</br> que estan siempre en continua formación para ofrecer lo último.</p>
-					</div>				
-                   <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-                        <div class="flexslider testi-slider wow animated fadeInUp" data-wow-delay=".06s">
-                            <ul class="slides">
-                                <li>
-                                    <div class="testi-slider-item">
-                                        <div class="team_img">
-											<img src="assets/img/team/team-1.jpg" class="img-responsive" alt="">
-										</div>
-											<h6>Eduard Sanz Peris</h6>                 
-											<p>Ingeniero Informático</p>
-										<div class="skills">
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">diseño</p>
-												<div class="progress-bar">
-													<span data-percent="50"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Programación </p>
-												<div class="progress-bar">
-													<span data-percent="95"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Marketing </p>
-												<div class="progress-bar">
-													<span data-percent="65"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Asistencia Técnica </p>
-												<div class="progress-bar">
-													<span data-percent="80"></span>
-												</div>
-											</div>	
-										</div><!-- END PROGRESS BAR-->
-
-										<!-- <div class="team_social">
-											<ul>
-												<li><a class="f_facebook  wow bounceInDown" data-wow-delay=".1s" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-												<li><a class="f_twitter wow bounceInDown" data-wow-delay=".2s" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-												<li><a class="f_google wow bounceInDown" data-wow-delay=".3s" href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-												<li><a class="f_linkedin wow bounceInDown" data-wow-delay=".4s" href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-											</ul>
-										</div>END TEAM SOCIAL -->
+    <!-- START WHY CHOOSE US --> 
+    <section id="why_us" class="why_choice_us section-padding">			
+        <div class="container">
+            <div class="row">	
+                <div class="section-title text-center wow zoomIn">
+                    <h2>Porque elegir avanza</h2>
+                    <span></span>
+                    <p>Por nuestro compromiso en poner al servicio de nuestros clientes las mejores herramientas informáticas y el mas novedoso software y hardware,<br> así como el mejor trato y colaboración posible.</p>
+                </div>				
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <img src="{{ asset('assets/img/why_img.jpg') }}" class="img-responsive" alt="" />
+                </div><!-- END COL -->						
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="according-area">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-target="#collapseOne" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">
+                                            Haz crecer tu Negocio
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        Situa tu empresa o negocio en la era informatica y de la comunicación con las ultimas herramientas disponibles. Agiliza y haz más fácil la gestión de tu negocio con el mejor software personalizado a tus necesidades.
                                     </div>
-								</li><!--SINGLE SLIDE-->
-								
-                                <li>
-                                    <div class="testi-slider-item">
-										<div class="team_img">
-											<img src="assets/img/team/team-2.jpg" class="img-responsive" alt="">
-										</div>
-										<h6>Miguel Peiró Belenguer</h6>                      
-										<p>Ingeniero Informático</p>
-										<div class="skills">
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Diseño</p>
-												<div class="progress-bar">
-													<span data-percent="75"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Redes </p>
-												<div class="progress-bar">
-													<span data-percent="95"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">HelpDesk </p>
-												<div class="progress-bar">
-													<span data-percent="95"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Asistencia Técnica </p>
-												<div class="progress-bar">
-													<span data-percent="95"></span>
-												</div>
-											</div>	
-										</div>
-										<!-- END PROGRESS BAR-->
+                                </div>
+                            </div><!--- END PANEL -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Posibilidades Ilimitadas
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        La informática puede solucionar cualquier problema de tu negocio facilitandotu trabajo, si no exite herramienta que lo solucione, nosotros la crearemos para ti.
                                     </div>
-								</li><!--SINGLE SLIDE-->
-								
-                                <li>
-                                    <div class="testi-slider-item">
-										<div class="team_img">
-											<img src="assets/img/team/team-3.jpg" class="img-responsive" alt="">
-										</div>
-										<h6>Jose Ramon Giros Perez</h6>                      
-										<p>Ingeniero Informático</p>
-										<div class="skills">
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Diseño</p>
-												<div class="progress-bar">
-													<span data-percent="80"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Programación </p>
-												<div class="progress-bar">
-													<span data-percent="80"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Bases de Datos </p>
-												<div class="progress-bar">
-													<span data-percent="95"></span>
-												</div>
-											</div>		
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Asistencia Técnica </p>
-												<div class="progress-bar">
-													<span data-percent="90"></span>
-												</div>
-											</div>	
-										</div>
-										<!-- END PROGRESS BAR-->
+                                </div>
+                            </div><!--- END PANEL -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Software Responsive
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        Todo el software que desarrollamos se adapta completamente a todos los dipositivos.
                                     </div>
-								</li><!--SINGLE SLIDE-->
-								
-                                <li>
-                                    <div class="testi-slider-item">
-										<div class="team_img">
-											<img src="assets/img/team/team-4.jpg" class="img-responsive" alt="">
-										</div>
-										<h6>Jose Vicente Campos Moreno</h6>                      
-										<p>Técnico Desarrollador de Aplicaciones Multiplataforma</p>
-										<div class="skills">
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Diseño</p>
-												<div class="progress-bar">
-													<span data-percent="65"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Programación </p>
-												<div class="progress-bar">
-													<span data-percent="95"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Base de Datos </p>
-												<div class="progress-bar">
-													<span data-percent="85"></span>
-												</div>
-											</div>	
-										</div>
-										<!-- END PROGRESS BAR-->										
+                                </div>
+                            </div><!--- END PANEL -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingfour">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                            Precio Justo
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
+                                    <div class="panel-body">
+                                        Ajustamos nuestros precios a la calidad de nuestros servicios y a la competencia para ofrecer un precio justo y asequible a nuestros clientes.
                                     </div>
-								</li><!--SINGLE SLIDE-->
-								
-                                <li>
-                                    <div class="testi-slider-item">
-										<div class="team_img">
-											<img src="assets/img/team/team-1.jpg" class="img-responsive" alt="">
-										</div>
-										<h6>Jose Herrero Desco</h6>                      
-										<p>Técnico Desarrollador de Aplicaciones Multiplataforma</p>
-										<div class="skills">
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Diseño</p>
-												<div class="progress-bar">
-													<span data-percent="95"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Programación </p>
-												<div class="progress-bar">
-													<span data-percent="90"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Base de Datos </p>
-												<div class="progress-bar">
-													<span data-percent="70"></span>
-												</div>
-											</div>	
-										</div>
-										<!-- END PROGRESS BAR-->										
-                                    </div>
-								</li><!--SINGLE SLIDE-->
-								
-                                <li>
-                                    <div class="testi-slider-item">
-										<div class="team_img">
-											<img src="assets/img/team/team-1.jpg" class="img-responsive" alt="">
-										</div>
-										<h6>Francisco Javier Peraira Lorca</h6>                      
-										<p></p>
-										<div class="skills">
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Diseño</p>
-												<div class="progress-bar">
-													<span data-percent="95"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Programación </p>
-												<div class="progress-bar">
-													<span data-percent="90"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Base de Datos </p>
-												<div class="progress-bar">
-													<span data-percent="70"></span>
-												</div>
-											</div>	
-										</div>
-										<!-- END PROGRESS BAR-->										
-                                    </div>
-								</li><!--SINGLE SLIDE-->
-								
-                                <li>
-                                    <div class="testi-slider-item">
-										<div class="team_img">
-											<img src="assets/img/team/team-1.jpg" class="img-responsive" alt="">
-										</div>
-										<h6>Oscar Casanova Ballester</h6>                      
-										<p></p>
-										<div class="skills">
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Diseño</p>
-												<div class="progress-bar">
-													<span data-percent="95"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Programación </p>
-												<div class="progress-bar">
-													<span data-percent="90"></span>
-												</div>
-											</div>	
-											<div class="progress-bar-linear">
-												<p class="progress-bar-text">Base de Datos </p>
-												<div class="progress-bar">
-													<span data-percent="70"></span>
-												</div>
-											</div>	
-										</div>
-										<!-- END PROGRESS BAR-->										
-                                    </div>
-								</li><!--SINGLE SLIDE-->
-								
+                                </div>
+                            </div><!--- END PANEL -->
 
-								
-							</ul><!--- END SLIDES -->
-							
-                        </div><!--- END FLEXSLIDER -->
-                    </div><!--- END COL -->
-				</div><!-- END ROW  -->
-			</div><!-- END CONTAINER  -->
-		</section>	
-		<!-- END TEAM -->
+                            <!-- <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingfive">
+                                            <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                              24/7 faster Support
+                                            </a>
+                                            </h4>
+                                    </div>
+                                    <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
+                                            <div class="panel-body">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed elit tortor. Quisque bibendum mauris velit, sed tincidunt massa lacinia nec. Mauris rutrum viverra metus, vel aliquet libero eleifend eu. Sed id tempus libero, vitae porta nisi.
+                                            </div>
+                                    </div>
+                            </div> -->
+                            <!--- END PANEL -->
 
-		<!-- START BLOG -->
-		<section id="blog" class="home_blog section-padding">
-			<div class="container">
-				<div class="row">
-					<div class="section-title text-center wow zoomIn">
-						<h2>Blog</h2>
-						<span></span>
-					</div>
+                        </div><!--- END PANEL GROUP-->
+                    </div><!--- END ACCORDION AREA -->
+                </div><!-- END COL -->					
+            </div><!-- END ROW -->
+        </div><!-- END CONTAINER -->
+    </section>
+    <!-- END WHY CHOOSE US -->
 
-					<div class="col-md-4 col-sm-12 col-xs-12">
-						<article class="blog-post">						
-							<div class="post-img"> <img src="assets/img/blog/blog-1.jpg" alt=""></div>	
-							<h4>Blog Title Here</h4>					
-							<!-- BLOG DETAIL --> 
-							 <span class="post-bt">by <span class="text-color-primary">Accede</span></span>
-							<ul class="post-info">
-							  <li> <i class="fa fa-comments-o"></i>97 </li>
-							  <li> <i class="fa fa-eye"></i>565 </li>
-							  <li> <i class="fa fa-bookmark-o"></i>Web Design </li>
-							  <li> <span class="date font-crimson">28 August</span> </li>
-							</ul>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru exercit ation </p>
-							<a class="btn btn-lg btn-blog-bg" href="#">Read more</a>
-						</article>
-					</div><!--- END COL -->
-					
-				</div><!--- END ROW -->
-			</div><!--- END CONTAINER -->
-		</section>
-		<!-- END BLOG -->	
-		
-		<!-- START COMPANY PARTNER LOGO  -->
-		<div class="partner-logo section-padding">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="partner  wow fadeInRight">
-							<a href="#"><img src="assets/img/partner/symfony2.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/android.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/4.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/visual3.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/angular2.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/ionic.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/typescript.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/mongo.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/sqlite.png" alt="image"></a>
-						</div>
-					</div><!-- END COL  -->
-				</div><!--END  ROW  -->
-			</div><!-- END CONTAINER  -->
-		</div>
-		<!-- END COMPANY PARTNER LOGO -->
-		
-		<!-- START CONTACT FORM-->
-		<section id="contact" class="contact_area" style="background-image: url(assets/img/bg/contact-bg.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;">
-			<div class="container">
-				<div class="row">		
-					<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp">
-						<div class="contact_address">
-							<h3>Contáctenos</h3>
-							<p>Ponte en contacto para guiarte en encontrar la solución a tu negocio. Envía tu CV para trabajar con nosotros.</p>						
-							<ul>
-								<li><i class="fa fa-map"></i> C/ Profesor Beltrán Báguena 5, 46015 Valencia</li>
-								<li><i class="fa fa-phone"></i>(+34) 960-395-329</li>
-								<li><i class="fa fa-envelope"></i>info@avanzaconsultoria.com</li>
-								<li><i class="fa fa-clock-o"></i>Lun - Vie: 09:00 - 18:00</li>
-							</ul>
-						</div>
-					</div><!-- END COL -->						
-					<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight">
-						<div class="contact">
-							<form id="contact-form" method="post" enctype="multipart/form-data">
-								<div class="row">
-									<div class="form-group col-md-12">
-										<input type="text" name="name" class="form-control" id="first-name" placeholder="Nombre" required="required">
-									</div>
-									<div class="form-group col-md-12">
-										<input type="email" name="email" class="form-control" id="email" placeholder="Email" required="required">
-									</div>
-									<div class="form-group col-md-12">
-										<textarea rows="6" name="message" class="form-control" id="description" placeholder="Tu Mensaje" required="required"></textarea>
-									</div>
-									<div class="col-md-12">
-										<div class="actions">
-											<input type="submit" value="Enviar" name="submit" id="submitButton" class="btn btn-lg btn-contact-bg" title="Submit Your Message!" />
-										</div>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div><!-- END COL -->
-				</div><!--- END ROW -->				
-			</div><!--- END CONTAINER -->	
-		</section>
-		<!-- END CONTACT FORM -->
-		
-		<!-- START MAP -->
-		<div id="map"></div>
-		<!-- END MAP -->
+    <!-- START PORTFOLIO -->
+    <section id="portfolio" class="our_portfolio section-padding">
+        <div class="container">
+            <!-- PORTFOLIO FILTER BUTTONS -->	
+            <div class="row">	
+                <div class="section-title text-center wow zoomIn">
+                    <h2>Trabajos de Avanza</h2>
+                    <span></span>
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru<br> exercit ation Lorem ipsum dolor sit amet.Veniam quis notru exercit.</p> -->
+                </div>				
+                <!-- <div class="col-xs-12 text-center">
+                        <ul class="portfolio-filters">
+                                <li class="filter active" data-filter="all">all</li>
+                                <li class="filter" data-filter="graphic">Graphic</li>
+                                <li class="filter" data-filter="print">Print</li>
+                                <li class="filter" data-filter="webdesign">webdesign</li>
+                        </ul>						
+                </div> -->
+                <!-- END COL -->
+            </div><!-- END ROW -->
+            <div class="row">
+                <ul class="portfolio-items-list">
+                    <li class="col-md-4 col-sm-6 col-xs-12  portfolio-item print graphic" data-cat="2">
+                        <div class="hover-overlay"> 			
+                            <img class="img-responsive" src="{{ asset('assets/img/portfolio/1.jpg') }}" alt="Portfolio Image">	
+                            <a class="prettyPhoto image_zoom" href="{{asset('assets/img/portfolio/1.jpg') }}" title="Project Image">
+                                <div class="item-overlay">										
+                                    <div class="overlay-content">
+                                        <h4 class="small-title">Project Title Here</h4>
+                                        <h5>Project Category</h5>
+                                    </div>
+                                </div>	  
+                            </a>
+                        </div>
+                    </li><!-- END PORTFOLIO IMAGE -->
+                    <li class="col-md-4 col-sm-6 col-xs-12  portfolio-item webdesign" data-cat="2">
+                        <div class="hover-overlay"> 			
+                            <img class="img-responsive" src="{{ asset('assets/img/portfolio/2.jpg') }}" alt="Portfolio Image">	
+                            <a class="prettyPhoto image_zoom" href="assets/img/portfolio/2.jpg" title="Project Image">
+                                <div class="item-overlay">										
+                                    <div class="overlay-content">
+                                        <h4 class="small-title">Project Title Here</h4>
+                                        <h5>Project Category</h5>
+                                    </div>
+                                </div>	  
+                            </a>
+                        </div>
+                    </li><!-- END PORTFOLIO IMAGE -->
+                    <li class="col-md-4 col-sm-6 col-xs-12  portfolio-item print graphic" data-cat="2">
+                        <div class="hover-overlay"> 			
+                            <img class="img-responsive" src="{{ asset('assets/img/portfolio/3.jpg') }}" alt="Portfolio Image">	
+                            <a class="prettyPhoto image_zoom" href="{{ asset('assets/img/portfolio/3.jpg') }}" title="Project Image">
+                                <div class="item-overlay">										
+                                    <div class="overlay-content">
+                                        <h4 class="small-title">Project Title Here</h4>
+                                        <h5>Project Category</h5>
+                                    </div>
+                                </div>	  
+                            </a>
+                        </div>
+                    </li><!-- END PORTFOLIO IMAGE -->	
+                </ul>
+            </div>
+            <!-- END ROW  -->
 
-		<!-- START NEWSLETTER -->
-		<!-- <section class="newsletter_form section-padding">
-			<div class="container">
-				<div class="row">										
-					<div class="col-md-8 col-md-offset-2 col-sm-12 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="newsletter_title text-center">
-							<h4>Subscribe to get the latest news, update and offer information. Don't worry, we won't send spam!</h4> -->
-							
-							<!-- START MAILCHIMP SIGNUP FORM -->
-							
-							<!-- <div class="signup">
-							<form action="http://site90.us11.list-manage.com/subscribe/post?u=599a2153f4b86cb2f92d4af3a&amp;id=26d7c26287" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-							<div class="input-group input-group-lg newsletter">
-								<input type="email" name="EMAIL" class="form-control" placeholder="Enter Email">
-								<span class="input-group-btn">
-									<button type="submit" name="subscribe" class="btn-newsletter-bg">Subscribe!</button>
-								</span>
-							</div>
-							<div id="mce-responses">
-								<div class="response" id="mce-error-response" style="display:none"></div>
-								<div class="response" id="mce-success-response" style="display:none"></div>
-							</div>
-							</form>
-							</div> -->
-							<!-- END MAILCHIMP SIGNUP FORM -->
-						<!-- </div> -->
-					<!-- </div> -->
-					<!--- END COL -->
-				<!-- </div> -->
-				<!--- END ROW -->
-			<!-- </div> -->
-			<!--- END CONTAINER -->
-		<!-- </section> -->
-		<!-- END FOOTER TOP -->
+            <!-- <div class="portfolio_btn text-center">
+                    <a href="#" class="btn btn-default btn-portfolio-bg">See More Work</a>
+            </div> -->
+        </div>
+        <!-- END CONTAINER  -->
+    </section>
+    <!-- END PORTFOLIO -->
+
+    <!-- START PROMOTION -->
+    <section class="promotions" style="background-image: url({{ asset('assets/img/bg/programer.jpg') }});  background-size:cover; background-position: center center;background-attachment:fixed;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
+                    <div class="promotion_content">
+                        <h1>Sómos tu mejor Elección</h1>
+                        <p>Porque nadie puede permitir que su negocio o empresa quede rezagada ante la competencia, somos tu mejor opción para modernizarte y aumentar tus posibilidades frente a los demás con lo último en software a medida y hardware a un precio asequible.</p>
+                        <!-- <a href="#contact">get start</a> -->
+                    </div>
+                </div><!-- END COL  -->
+            </div><!-- END ROW  -->
+        </div><!-- END CONTAINER  -->
+    </section>
+    <!-- END PROMOTION -->
+
+    <!-- START TEAM -->
+    <section id="team" class="our_team section-padding">
+        <div class="container">
+            <div class="row">	
+                <div class="section-title text-center wow zoomIn">
+                    <h2>Nuestro Equipo</h2>
+                    <span></span>
+                    <p>Las nuevas tecnologías evolucionan constantemente asi como nuestro equipo de profesionales,</br> que estan siempre en continua formación para ofrecer lo último.</p>
+                </div>				
+                <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                    <div class="flexslider testi-slider wow animated fadeInUp" data-wow-delay=".06s">
+                        <ul class="slides">
+                            <li>
+                                <div class="testi-slider-item">
+                                    <div class="team_img">
+                                        <img src="{{ asset('assets/img/team/team-1.jpg') }}" class="img-responsive" alt="">
+                                    </div>
+                                    <h6>Eduard Sanz Peris</h6>                 
+                                    <p>Ingeniero Informático</p>
+                                    <div class="skills">
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">diseño</p>
+                                            <div class="progress-bar">
+                                                <span data-percent="50"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Programación </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="95"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Marketing </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="65"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Asistencia Técnica </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="80"></span>
+                                            </div>
+                                        </div>	
+                                    </div><!-- END PROGRESS BAR-->
+
+                                    <!-- <div class="team_social">
+                                            <ul>
+                                                    <li><a class="f_facebook  wow bounceInDown" data-wow-delay=".1s" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a class="f_twitter wow bounceInDown" data-wow-delay=".2s" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a class="f_google wow bounceInDown" data-wow-delay=".3s" href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+                                                    <li><a class="f_linkedin wow bounceInDown" data-wow-delay=".4s" href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                    </div>END TEAM SOCIAL -->
+                                </div>
+                            </li><!--SINGLE SLIDE-->
+
+                            <li>
+                                <div class="testi-slider-item">
+                                    <div class="team_img">
+                                        <img src="{{ asset('assets/img/team/team-2.jpg') }}" class="img-responsive" alt="">
+                                    </div>
+                                    <h6>Miguel Peiró Belenguer</h6>                      
+                                    <p>Ingeniero Informático</p>
+                                    <div class="skills">
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Diseño</p>
+                                            <div class="progress-bar">
+                                                <span data-percent="75"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Redes </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="95"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">HelpDesk </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="95"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Asistencia Técnica </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="95"></span>
+                                            </div>
+                                        </div>	
+                                    </div>
+                                    <!-- END PROGRESS BAR-->
+                                </div>
+                            </li><!--SINGLE SLIDE-->
+
+                            <li>
+                                <div class="testi-slider-item">
+                                    <div class="team_img">
+                                        <img src="{{ asset('assets/img/team/team-3.jpg') }}" class="img-responsive" alt="">
+                                    </div>
+                                    <h6>Jose Ramon Giros Perez</h6>                      
+                                    <p>Ingeniero Informático</p>
+                                    <div class="skills">
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Diseño</p>
+                                            <div class="progress-bar">
+                                                <span data-percent="80"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Programación </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="80"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Bases de Datos </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="95"></span>
+                                            </div>
+                                        </div>		
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Asistencia Técnica </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="90"></span>
+                                            </div>
+                                        </div>	
+                                    </div>
+                                    <!-- END PROGRESS BAR-->
+                                </div>
+                            </li><!--SINGLE SLIDE-->
+
+                            <li>
+                                <div class="testi-slider-item">
+                                    <div class="team_img">
+                                        <img src="{{ asset('assets/img/team/team-4.jpg') }}" class="img-responsive" alt="">
+                                    </div>
+                                    <h6>Jose Vicente Campos Moreno</h6>                      
+                                    <p>Técnico Desarrollador de Aplicaciones Multiplataforma</p>
+                                    <div class="skills">
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Diseño</p>
+                                            <div class="progress-bar">
+                                                <span data-percent="65"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Programación </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="95"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Base de Datos </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="85"></span>
+                                            </div>
+                                        </div>	
+                                    </div>
+                                    <!-- END PROGRESS BAR-->										
+                                </div>
+                            </li><!--SINGLE SLIDE-->
+
+                            <li>
+                                <div class="testi-slider-item">
+                                    <div class="team_img">
+                                        <img src="{{ asset('assets/img/team/team-1.jpg') }}" class="img-responsive" alt="">
+                                    </div>
+                                    <h6>Jose Herrero Desco</h6>                      
+                                    <p>Técnico Desarrollador de Aplicaciones Multiplataforma</p>
+                                    <div class="skills">
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Diseño</p>
+                                            <div class="progress-bar">
+                                                <span data-percent="95"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Programación </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="90"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Base de Datos </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="70"></span>
+                                            </div>
+                                        </div>	
+                                    </div>
+                                    <!-- END PROGRESS BAR-->										
+                                </div>
+                            </li><!--SINGLE SLIDE-->
+
+                            <li>
+                                <div class="testi-slider-item">
+                                    <div class="team_img">
+                                        <img src="{{ asset('assets/img/team/team-1.jpg') }}" class="img-responsive" alt="">
+                                    </div>
+                                    <h6>Francisco Javier Peraira Lorca</h6>                      
+                                    <p></p>
+                                    <div class="skills">
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Diseño</p>
+                                            <div class="progress-bar">
+                                                <span data-percent="95"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Programación </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="90"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Base de Datos </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="70"></span>
+                                            </div>
+                                        </div>	
+                                    </div>
+                                    <!-- END PROGRESS BAR-->										
+                                </div>
+                            </li><!--SINGLE SLIDE-->
+
+                            <li>
+                                <div class="testi-slider-item">
+                                    <div class="team_img">
+                                        <img src="{{ asset('assets/img/team/team-1.jpg') }}" class="img-responsive" alt="">
+                                    </div>
+                                    <h6>Oscar Casanova Ballester</h6>                      
+                                    <p></p>
+                                    <div class="skills">
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Diseño</p>
+                                            <div class="progress-bar">
+                                                <span data-percent="95"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Programación </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="90"></span>
+                                            </div>
+                                        </div>	
+                                        <div class="progress-bar-linear">
+                                            <p class="progress-bar-text">Base de Datos </p>
+                                            <div class="progress-bar">
+                                                <span data-percent="70"></span>
+                                            </div>
+                                        </div>	
+                                    </div>
+                                    <!-- END PROGRESS BAR-->										
+                                </div>
+                            </li><!--SINGLE SLIDE-->
+
+
+
+                        </ul><!--- END SLIDES -->
+
+                    </div><!--- END FLEXSLIDER -->
+                </div><!--- END COL -->
+            </div><!-- END ROW  -->
+        </div><!-- END CONTAINER  -->
+    </section>	
+    <!-- END TEAM -->
+
+    <!-- START BLOG -->
+    <section id="blog" class="home_blog section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="section-title text-center wow zoomIn">
+                    <h2>Blog</h2>
+                    <span></span>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <article class="blog-post">						
+                        <div class="post-img"> <img src="{{ asset('assets/img/blog/blog-1.jpg') }}" alt=""></div>	
+                        <h4>Blog Title Here</h4>					
+                        <!-- BLOG DETAIL --> 
+                        <span class="post-bt">by <span class="text-color-primary">Accede</span></span>
+                        <ul class="post-info">
+                            <li> <i class="fa fa-comments-o"></i>97 </li>
+                            <li> <i class="fa fa-eye"></i>565 </li>
+                            <li> <i class="fa fa-bookmark-o"></i>Web Design </li>
+                            <li> <span class="date font-crimson">28 August</span> </li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru exercit ation </p>
+                        <a class="btn btn-lg btn-blog-bg" href="#">Read more</a>
+                    </article>
+                </div><!--- END COL -->
+
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </section>
+    <!-- END BLOG -->	
+
+    <!-- START COMPANY PARTNER LOGO  -->
+    <div class="partner-logo section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="partner  wow fadeInRight">
+                        <a href="#"><img src="{{ asset('assets/img/partner/symfony2.png') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('assets/img/partner/android.png') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('assets/img/partner/4.png') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('assets/img/partner/visual3.png') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('assets/img/partner/angular2.png') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('assets/img/partner/ionic.png') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('assets/img/partner/typescript.png') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('assets/img/partner/mongo.png') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('assets/img/partner/sqlite.png') }}" alt="image"></a>
+                    </div>
+                </div><!-- END COL  -->
+            </div><!--END  ROW  -->
+        </div><!-- END CONTAINER  -->
+    </div>
+    <!-- END COMPANY PARTNER LOGO -->
+
+    <!-- START CONTACT FORM-->
+    <section id="contact" class="contact_area" style="background-image: url({{ asset('assets/img/bg/contact-bg.jpg') }});  background-size:cover; background-position: center center;background-attachment:fixed;">
+        <div class="container">
+            <div class="row">		
+                <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp">
+                    <div class="contact_address">
+                        <h3>Contáctenos</h3>
+                        <p>Ponte en contacto para guiarte en encontrar la solución a tu negocio. Envía tu CV para trabajar con nosotros.</p>						
+                        <ul>
+                            <li><i class="fa fa-map"></i> C/ Profesor Beltrán Báguena 5, 46015 Valencia</li>
+                            <li><i class="fa fa-phone"></i>(+34) 960-395-329</li>
+                            <li><i class="fa fa-envelope"></i>info@avanzaconsultoria.com</li>
+                            <li><i class="fa fa-clock-o"></i>Lun - Vie: 09:00 - 18:00</li>
+                        </ul>
+                    </div>
+                </div><!-- END COL -->						
+                <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight">
+                    <div class="contact">
+                        
+                            <div class="row">
+                                {{ form_start(form) }}
+                                {{ form_widget(form) }}
+                                {{ form_end(form) }}
+                            </div>
+                       
+                    </div>
+                </div><!-- END COL -->
+            </div><!--- END ROW -->				
+        </div><!--- END CONTAINER -->	
+    </section>
+    <!-- END CONTACT FORM -->
+
+    <!-- START MAP -->
+    <div id="map"></div>
+    <!-- END MAP -->
+
+    <!-- START NEWSLETTER -->
+    <!-- <section class="newsletter_form section-padding">
+            <div class="container">
+                    <div class="row">										
+                            <div class="col-md-8 col-md-offset-2 col-sm-12 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                                    <div class="newsletter_title text-center">
+                                            <h4>Subscribe to get the latest news, update and offer information. Don't worry, we won't send spam!</h4> -->
+
+    <!-- START MAILCHIMP SIGNUP FORM -->
+
+    <!-- <div class="signup">
+    <form action="http://site90.us11.list-manage.com/subscribe/post?u=599a2153f4b86cb2f92d4af3a&amp;id=26d7c26287" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div class="input-group input-group-lg newsletter">
+            <input type="email" name="EMAIL" class="form-control" placeholder="Enter Email">
+            <span class="input-group-btn">
+                    <button type="submit" name="subscribe" class="btn-newsletter-bg">Subscribe!</button>
+            </span>
+    </div>
+    <div id="mce-responses">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>
+    </form>
+    </div> -->
+    <!-- END MAILCHIMP SIGNUP FORM -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!--- END COL -->
+    <!-- </div> -->
+    <!--- END ROW -->
+    <!-- </div> -->
+    <!--- END CONTAINER -->
+    <!-- </section> -->
+    <!-- END FOOTER TOP -->
 {% endblock %}

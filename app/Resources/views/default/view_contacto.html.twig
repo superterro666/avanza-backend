@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-6"  style="margin:7% auto; float: none; border: 1px #4C6481 solid">
+            <h2>{{contacto.titulo}}</h2>
+            <hr>
+            <p>De : {{contacto.email }} To: info@avanzaconsultoria.com</p>
+            <p>Telefono de contacto: {{contacto.telefono}}
+            <p>Consulta sobre el servicio de {{contacto.servicio}}</p>
+            <p>Contenido</p>
+            <p>{{contacto.contenido}}</p>
+            <a class="btn btn-block btn-success" role="button" href="{{ url( 'home' ) }}">
+   Volver
+</a>
+            
+        </div>
+    </div>
+    </div>
+    
+    
+    
+{% endblock %}

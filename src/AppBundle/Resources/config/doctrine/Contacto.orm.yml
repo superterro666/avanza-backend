@@ -1,0 +1,26 @@
+AppBundle\Entity\Contacto:
+    type: entity
+    table: contactos
+    repositoryClass: AppBundle\Repository\ContactoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titulo:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+        telefono:
+            type: string
+            length: '11'
+        contenido:
+            type: text
+        servicio:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

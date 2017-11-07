@@ -39,9 +39,45 @@
 	</head>
 	
     <body data-spy="scroll" data-offset="80">
+          <div class="preloader">
+        <div class="status">
+            <div class="status-mes"><h4>Avanza</h4></div>
+        </div>
+    </div>
+    <!-- END PRELOADER -->
+
+    <!-- START NAVBAR -->
+    <div class="navbar navbar-default navbar-fixed-top menu-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index_slider.html" class="navbar-brand"><img src="{{ asset('assets/img/logoAblucorto.png') }}" alt="logo"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <nav>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="#home">Inicio</a></li>
+                        <li><a class="page-scroll" href="#about">Nosotros</a></li>
+                        <li><a class="page-scroll" href="#service">Servicios</a></li>
+                        <li><a class="page-scroll" href="#why_us">Porque Nosotros?</a></li>
+                        <li><a class="page-scroll" href="#portfolio">Portafolio</a></li>
+                        <li><a class="page-scroll" href="#team">Equipo</a></li>						
+                        <li><a class="page-scroll" href="#blog">Blog</a></li>							
+                        <!-- <li><a class="page-scroll" href="#pricing">Pricing</a></li> -->
+                        <li><a class="page-scroll" href="#contact">Contactenos</a></li>
+                    </ul>
+                </nav>
+            </div> 
+        </div><!--- END CONTAINER -->
+    </div> 
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
-    	<footer class="footer">
+    	<footer class="footer col-12">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
