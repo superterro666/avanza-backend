@@ -15,8 +15,8 @@ class AuthController extends Controller {
         $authcheck = $auth->checkToken($autho);
         
         if ($authcheck == true) {
-
-            return new JsonResponse($response->success());
+            $correo = $this->getCorreoNoLeido();
+            return new JsonResponse(array('code'=>200,'correo'=>$correo));
         } else {
 
             return new JsonResponse($response->tokenError());
@@ -52,11 +52,21 @@ class AuthController extends Controller {
                 $signup = $jwcAuth->signup($user);
 
                 if ($signup != null)
+                    $correo = $this->getCorreoNoLeido();
+                    array_push($signup['user'],$correo);
                     return new JsonResponse($signup);
             } 
             return new JsonResponse($response->loginError());
        
     }
+    
+    
+    
+    private function getCorreoNoLeido(){
+     $em = $this->getDoctrine()->getManager();
+     $correo = $em->getRepository("AppBundle:Contacto")->findBy(array('estado'=>0));
+     return count($correo);
+ }
     
     
   

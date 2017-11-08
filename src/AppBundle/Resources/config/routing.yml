@@ -14,4 +14,8 @@ app_bundle_home:
     resource: "@AppBundle/Resources/config/routing/home.yml"
     prefix: /
     
+app_bundle_mensaje:
+    resource: "@AppBundle/Resources/config/routing/mensaje.yml"
+    prefix: /
+    
     

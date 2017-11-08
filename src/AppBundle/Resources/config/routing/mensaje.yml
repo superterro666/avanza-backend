@@ -1,0 +1,25 @@
+set_mensaje:
+    path: /set/mensaje
+    defaults: { _controller: AppBundle:Mensaje:setMensaje }
+    methods: [POST]
+    
+view_mensaje:
+    path: /view/mensaje/{id}/{token}
+    defaults: { _controller: AppBundle:Mensaje:viewMensaje, id:null, token:null }
+    methods: [GET]
+
+views_mensaje:
+    path:   /views/mensaje
+    defaults: { _controller: AppBundle:Mensaje:viewsMensaje }
+    methods: [GET]
+    
+update_mensaje:
+    path:   /update/mensaje/{id}/{token}
+    defaults: { _controller: AppBundle:Mensaje:updateMensaje, id:null, token:null }
+    methods: [GET]
+    
+delete_mensaje:
+    path:   /delete/mensaje/{id}/{token}
+    defaults: { _controller: AppBundle:Mensaje:deleteMensaje, id:null, token:null }
+    methods: [GET]
+    

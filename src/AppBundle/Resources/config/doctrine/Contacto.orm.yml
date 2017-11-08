@@ -23,4 +23,11 @@ AppBundle\Entity\Contacto:
         servicio:
             type: string
             length: 255
+            
+        estado:
+            type: boolean
+            
+        fecha:
+            type: datetime
+            
     lifecycleCallbacks: {  }

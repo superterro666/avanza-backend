@@ -17,22 +17,22 @@ class PortfolioController extends Controller {
         if ($json) {
             
             $titulo = $json->titulo ?? false;
-            $categoria = $json->categoria ?? false;
+            $texto = $json->texto ?? false;
 
-            if ($titulo && $categoria) {
+            if ($titulo && $texto) {
                 try {
                     $em = $this->getDoctrine()->getManager();
 
                     $portfolio = new Portfolio();
                     $portfolio->setFecha(new \DateTime());
                     $portfolio->setTitulo($titulo);
-                    $portfolio->setCategoria($categoria);
+                    $portfolio->setTexto($texto);
                     $portfolio->setImagen(null);
 
                     $em->persist($portfolio);
                     $em->flush();
 
-                    $dql = "SELECT b.titulo, b.categoria, b.id, b.imagen  FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
+                    $dql = "SELECT b.titulo, b.texto, b.id, b.imagen  FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
 
                     $query = $em->createQuery($dql);
                     $result = $query->getResult();
@@ -57,11 +57,11 @@ class PortfolioController extends Controller {
         if ($json) {
 
             $titulo = $json->titulo ?? false;
-            $categoria = $json->categoria ?? false;
+            $texto = $json->texto ?? false;
             $id = $json->id ?? false;
 
 
-            if ($titulo && $categoria && $id) {
+            if ($titulo && $texto && $id) {
 
                 try {
                     $em = $this->getDoctrine()->getManager();
@@ -69,11 +69,11 @@ class PortfolioController extends Controller {
                     $portfolio = $em->getRepository("EntityBundle:Portfolio")->findOneBy(array('id' => $json->id));
 
                     $portfolio->setTitulo($titulo);
-                    $portfolio->setCategoria($categoria);
+                    $portfolio->setTexto($texto);
                     $em->persist($portfolio);
                     $em->flush();
 
-                    $dql = "SELECT b.titulo, b.categoria, b.id, b.imagen  FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
+                    $dql = "SELECT b.titulo, b.texto, b.id, b.imagen  FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
 
                     $query = $em->createQuery($dql);
                     $result = $query->getResult();
@@ -103,7 +103,7 @@ class PortfolioController extends Controller {
 
                         $em->remove($portfolio);
                         $em->flush();
-                        $dql = "SELECT b.titulo, b.categoria, b.id, b.imagen  FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
+                        $dql = "SELECT b.titulo, b.texto, b.id, b.imagen  FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
 
                         $query = $em->createQuery($dql);
                         $result = $query->getResult();
@@ -126,12 +126,12 @@ class PortfolioController extends Controller {
             $id = $request->query->get('id') ?? false;
             if ($id) {
                 $em = $this->getDoctrine()->getManager();
-                $dql = "SELECT b.titulo, b.categoria, b.id , b.imagen FROM EntityBundle:Portfolio b WHERE b.id =:id";
+                $dql = "SELECT b.titulo, b.texto, b.id , b.imagen FROM EntityBundle:Portfolio b WHERE b.id =:id";
                 try {
                     $query = $em->createQuery($dql)->setParameter('id', $id);
                     $result = $query->getOneOrNullResult();
                     if (count($result) > 0)
-                        return new JsonResponse($result);
+                        return new JsonResponse(array('code'=>200,'portfolio'=>$result));
                     return new JsonResponse($error->dataError($result));
                 } catch (\Doctrine\DBAL\Exception $e) {
                     return new JsonResponse($error->dbError($e));
@@ -146,7 +146,7 @@ class PortfolioController extends Controller {
         $error = $this->get('error.service');
         if ($error->parseGet($request)) {
             $em = $this->getDoctrine()->getManager();
-            $dql = "SELECT b.titulo, b.categoria, b.id, b.imagen FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
+            $dql = "SELECT b.titulo, b.texto, b.id, b.imagen FROM EntityBundle:Portfolio b ORDER BY b.fecha DESC";
             try {
                 $query = $em->createQuery($dql);
                 $result = $query->getResult();

@@ -129,7 +129,7 @@ class BlogController extends Controller {
                     $query = $em->createQuery($dql)->setParameter('id', $id);
                     $result = $query->getOneOrNullResult();
                     if (count($result) > 0)
-                        return new JsonResponse($result);
+                        return new JsonResponse(array('code'=>200,'blog'=>$result));
                     return new JsonResponse($error->dataError($result));
                 } catch (\Doctrine\DBAL\Exception $e) {
                     return new JsonResponse($error->dbError($e));

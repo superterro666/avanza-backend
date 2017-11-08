@@ -12,7 +12,7 @@ EntityBundle\Entity\Portfolio:
         titulo:
             type: string
             length: 255
-        categoria:
+        texto:
             type: string
             length: 255
         fecha:

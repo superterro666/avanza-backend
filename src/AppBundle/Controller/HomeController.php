@@ -35,27 +35,39 @@ class HomeController extends Controller {
         ->add('save', SubmitType::class, array('attr'=>array('class'=>'form-control','minlength'=>3,'label' => 'Enviar')))
         ->getForm();
     
-    
+     $form->remove('fecha'); 
+     $form->remove('estado'); 
+     
     $form->handleRequest($request);
 
     if ($form->isSubmitted() && $form->isValid()) {
         
         $contacto = $form->getData();
+        $contacto->setFecha(new \Datetime());
+        $contacto->setEstado(0);
         $em->persist($contacto);
         $em->flush();
         
          return $this->render(':default:view_contacto.html.twig', array('contacto'=>$contacto));
         
    }
+    /*
      $blogs = $this->getBlogs();
      $portfolios = $this->getPortfolio();
+     * 
+     */
      
      return $this->render(':default:index.html.twig', array(
-       'form' => $form->createView(),'principal'=>true, 'blogs'=>$blogs, 'portfolios'=>$portfolios));
+       'form' => $form->createView(),'principal'=>true,  /*'blogs'=>$blogs, 'portfolios'=>$portfolios */));
  }
  
  
  
+ 
+ 
+ 
+ 
+ /*
  private function getBlogs(){
      $em = $this->getDoctrine()->getManager();
      $blogs = $em->getRepository('EntityBundle:Blog')->findAll();
@@ -68,6 +80,8 @@ class HomeController extends Controller {
      return $portfolio;
  }
  
+  * 
+  */
 
     
     
