@@ -14,6 +14,14 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class HomeController extends Controller {
 
+    public function avisoAction(){
+        return $this->render(':default:avisoLegal.html.twig');
+    }
+
+    public function politicaAction(){
+        return $this->render(':default:politica.html.twig');
+    }
+
  public function indexAction(Request $request){
     $contacto = new Contacto();
     $em = $this->getDoctrine()->getManager();

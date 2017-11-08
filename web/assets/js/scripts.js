@@ -113,7 +113,7 @@ Version      : 1.0
 			var contentPoint = '<div id="content">' +
 				'<div id="siteNotice">' +
 				'</div>' +
-				'<img src="assets/img/logoInfoMap.png"></img>' +
+				'<img src="http://localhost/avanza-backend/web/assets/img/logoInfoMap.png"></img>' +
 				// '<h1 id="firstHeading" class="firstHeading">AVANZA</h1>' +
 				// '<h2 id="firstHeading" class="firstHeading">Consultoría Informática</h2>' +
 				'<div id="bodyContent">' +
@@ -131,7 +131,7 @@ Version      : 1.0
 
 			var marker = new google.maps.Marker({
 				position: map.getCenter(),
-				icon: 'assets/img/punterolargo.png',
+				icon: "http://localhost/avanza-backend/web/assets/img/punterolargo.png",
 				map: map
 			});
 

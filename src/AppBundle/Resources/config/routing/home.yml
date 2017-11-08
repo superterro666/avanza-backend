@@ -1,6 +1,13 @@
 home:
     path: /
     defaults: { _controller: AppBundle:Home:index }
+aviso:
+    path: /aviso
+    defaults: { _controller: AppBundle:Home:aviso }
+politica:
+    path: /politica
+    defaults: { _controller: AppBundle:Home:politica }
+
     
     
 

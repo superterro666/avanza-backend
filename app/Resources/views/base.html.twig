@@ -62,33 +62,42 @@
                 <nav>
                     
                     <ul class="nav navbar-nav navbar-right" >
-                        <li><a class="page-scroll" href="{% if principal is defined %} #home {% else %} {{ path( 'home', {'_fragment': 'home'}) }} {%endif%}">Inicio</a></li>
-                        <li><a class="page-scroll" href="{% if principal is defined%} #about {% else %} {{ path( 'home', {'_fragment': 'about'}) }} {%endif%}">Nosotros</a></li>
-                        <li><a class="page-scroll" href={% if principal is defined%} #service {%else%} {{ path( 'home', {'_fragment': 'service'}) }} {%endif%}>Servicios</a></li>
-                        <li><a class="page-scroll" href="{% if principal is defined%} #why_us {%else%} {{ path( 'home', {'_fragment': 'why_us'}) }} {%endif%}">Porque Nosotros?</a></li>
-                        <li><a class="page-scroll" href="{% if principal is defined%} #portfolio {%else%} {{ path( 'home', {'_fragment': 'portfolio'}) }} {%endif%}">Portafolio</a></li>
-                        <li><a class="page-scroll" href="{% if principal is defined%} #team {%else%} {{ path( 'home', {'_fragment': 'team'}) }} {%endif%}">Equipo</a></li>						
-                        <li><a class="page-scroll" href="{% if principal is defined%} #blog {%else%} {{ path( 'home', {'_fragment': 'blog'}) }} {%endif%}">Blog</a></li>							
-                        <li><a class="page-scroll" href="{% if principal is defined%} #contact {%else%} {{ path( 'home', {'_fragment': 'contact'}) }} {%endif%}">Contactenos</a></li>
+                        <li><a class="page-scroll" href="{% if principal is defined %} #home {% else %} {{ path( 'home', {'_fragment': 'home'}) }} {% endif %}">Inicio</a></li>
+                        <li><a class="page-scroll" href="{% if principal is defined %} #about {% else %} {{ path( 'home', {'_fragment': 'about'}) }} {% endif %}">Nosotros</a></li>
+                        <li><a class="page-scroll" href="{% if principal is defined %} #service {% else %} {{ path( 'home', {'_fragment': 'service'}) }} {% endif %}">Servicios</a></li>
+                        <li><a class="page-scroll" href="{% if principal is defined %} #why_us {% else %} {{ path( 'home', {'_fragment': 'why_us'}) }} {% endif %}">¿Porque Nosotros?</a></li>
+                        <li><a class="page-scroll" href="{% if principal is defined %} #portfolio {% else %} {{ path( 'home', {'_fragment': 'portfolio'}) }} {% endif %}">Portafolio</a></li>
+                        <li><a class="page-scroll" href="{% if principal is defined %} #team {% else %} {{ path( 'home', {'_fragment': 'team'}) }} {% endif %}">Equipo</a></li>						
+                        <li><a class="page-scroll" href="{% if principal is defined %} #blog {% else %} {{ path( 'home', {'_fragment': 'blog'}) }} {% endif %}">Blog</a></li>							
+                        <li><a class="page-scroll" href="{% if principal is defined %} #contact {% else %} {{ path( 'home', {'_fragment': 'contact'}) }} {% endif %}">Contactenos</a></li>
                     </ul>
                 </nav>
             </div> 
         </div><!--- END CONTAINER -->
     </div> 
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        
     	<footer class="footer col-12">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+					<div class="col-md-4 col-sm-4 col-xs-12 wow zoomIn">
 						<p class="footer_copyright pull-left">Avanza &copy; 2017 All Rights Reserved.</p>						
 					</div><!--- END COL -->
-					<div class="col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+
+					<div class="col-md-4 col-sm-4 col-xs-12 wow zoomIn">
+						<p class="footer_copyright centrartxt">
+							<a href="{{path('aviso')}}">Aviso Legal </a>
+							&#8212;
+							<a href="{{path('politica')}}"> Politica de Privacidad</a>
+						</p>						
+					</div><!--- END COL -->
+
+					<div class="col-md-4 col-sm-4 col-xs-12 wow zoomIn">
 						<div class="footer_social pull-right">
 							<ul>
-								<li><a class="footer_facebook  wow bounceInDown" data-wow-delay=".1s" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="footer_facebook  wow bounceInDown" data-wow-delay=".1s" href="https://www.facebook.com/Avanza-Consultor%C3%ADa-Inform%C3%A1tica-548084768866972/" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
 								<li><a class="footer_twitter wow bounceInDown" data-wow-delay=".2s" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-								<li><a class="footer_google wow bounceInDown" data-wow-delay=".3s" href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+								<li><a class="footer_google wow bounceInDown" data-wow-delay=".3s" href="https://aboutme.google.com/?referer=gplus" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
 								<li><a class="footer_linkedin wow bounceInDown" data-wow-delay=".4s" href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
 							</ul>
 						</div>					
@@ -122,8 +131,8 @@
 			<script src="{{asset('assets/js/jquery.appear.js')}}"></script>			
 		<!-- WOW - Reveal Animations When You Scroll -->
 			<script src="{{asset('assets/js/wow.min.js')}}"></script>
-		<!-- map js -->
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuU_0_uLMnFM-2oWod_fzC0atPZj7dHlU"></script>
+    	<!-- map js -->
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuU_0_uLMnFM-2oWod_fzC0atPZj7dHlU"></script>		
 		<!-- scripts js -->
 			<script src="{{asset('assets/js/scripts.js')}}"></script>
     </body>
