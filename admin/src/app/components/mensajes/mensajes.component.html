@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col">
+      <table class="table">
+          <thead>
+          <tr>
+          <th>Estado</th>
+          <th>Autor</th>
+          <th>Fecha</th>
+          <th>Titulo</th>
+          <th>Telefono</th>
+          <th>Acciones</th>
+          </tr>
+          </thead>
+          <tbody *ngIf="mensajes">
+          <tr *ngFor="let mensaje of mensajes; let i = index">
+          <td *ngIf="mensaje.estado==1"><i  class="fa fa-envelope-open-o" aria-hidden="true"></i></td>
+          <td *ngIf="mensaje.estado!=1"><i  class="fa fa-envelope" aria-hidden="true"></i></td>
+          <td>{{mensaje.email}}</td>
+          <td>{{mensaje.fecha}}</td>
+          <td>{{mensaje.titulo}}</td>
+          <td>{{mensaje.telefono}}</td>
+          <td>
+          <ul class="list-inline">
+              
+              <li class="list-inline-item">
+                  <a (click)="delete(i)"><i class="fa fa-trash"></i></a>
+              </li>
+              <li class="list-inline-item">
+                  <a [routerLink]="['/mensaje',mensaje.id]">Ver</a>
+              </li>
+
+            </ul>
+          </td>
+          
+          
+          </tr>
+         
+          </tbody>
+          </table>
+  </div>
+</div>

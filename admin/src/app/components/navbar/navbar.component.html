@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col">
+    <nav class="navbar navbar-toggleable-md  bg-faded navbar navbar-inverse colorBackground">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01" >
+        <a class="navbar-brand" href="#">Avanza</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0" *ngIf="logueado">
+          <li class="nav-item">
+            <a class="nav-link activo" [routerLink]="['\blog']">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link activo" [routerLink]="['\portfolio']">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link activo" [routerLink]="['\mensajes']">Mensajes</a><i>{{mensajes}}</i>
+          </li>
+        </ul>
+        <ul class="navbar-nav mt-2 mt-lg-0" *ngIf="logueado">
+          <li class="nav-item">
+            <a class="nav-link activo" href="#" (click)="logout()">Logout</a>
+          </li>
+        </ul>
+
+
+        <form class="form-inline my-2 my-lg-0" *ngIf="!logueado">
+          <input class="form-control mr-sm-2" type="text" name="user" [(ngModel)]="user" placeholder="User">
+          <input class="form-control mr-sm-2" type="text" name="password" [(ngModel)]="password" placeholder="Password">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="login()">Entrar</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</div>

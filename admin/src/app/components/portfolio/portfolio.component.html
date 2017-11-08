@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-7">
+      <h3 class="mTop15 mBot15 colortxtoscuro">Formulario Post</h3>
+      <form (ngSubmit)="onSubmit(portfolioForm)" #portfolioForm="ngForm">
+        <div class="form-group">
+          <label class="colortxt" for="exampleInputEmail1">Titulo</label>
+          <input type="text" class="form-control" name="titulo" [(ngModel)]="portfolio.titulo" aria-describedby="Describe el titulo" placeholder="Introduce el titulo">
+          <small id="emailHelp" class="form-text text-muted">Titulo cabecera del trabajo</small>
+        </div>
+
+        <div class="form-group">
+            <label class="colortxt" for="exampleInputEmail1">Categoria</label>
+            <input type="text" class="form-control" name="texto" [(ngModel)]="portfolio.texto" aria-describedby="Describe la categoria" placeholder="Introduce la categoria">
+            <small id="emailHelp" class="form-text text-muted">Titulo cabecera del la categoria</small>
+          </div>
+
+        <div class="form-group">
+          <label class="colortxt">Imagen principal</label>
+          <input type="file" class="form-control" name="imagen"  (change)="fileChangeEvent($event)" aria-describedby="Imagen principal" placeholder="Selecciona la imagen principal">
+          <small id="emailHelp" class="form-text text-muted">Imagen pricipal del post</small>
+        </div>
+      
+  
+        <button *ngIf="!portfolio.id" type="submit" class="btn btn-outline-primary btn-block">Crear</button>
+        <button *ngIf="portfolio.id" type="button" (click)="updateData()" class="btn btn-outline-success btn-block">Actualizar</button>
+  
+      </form>
+  
+    </div>
+    <div class="col-5">
+      <h3 class="mTop15 mBot15 colortxtoscuro">Listado ultimos trabajos</h3>
+      <table class="table table-sm tablaRedonda">
+        <thead>
+          <tr>
+            <th>Cabecera</th>
+            <th>Titulo</th>
+            <th>Actions</th>
+  
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let porfolio of portfolios; let i = index">
+            <td><img width="50" height="50" class="img-circle" *ngIf="porfolio.imagen != ''" src="http://localhost/avanza/web/uploads/images/{{porfolio.imagen}}"></td>
+            <td >{{porfolio.titulo}}</td>
+            <td>
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a (click)="update(i)"><i class="fa fa-pencil"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a (click)="deleteBlog(i)"><i class="fa fa-trash"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a [routerLink]="['/show', porfolio.id, 'portfolio']">Ver</a>
+                </li>
+  
+              </ul>
+            </td>
+  
+          </tr>
+  
+        </tbody>
+      </table>
+  
+    </div>
+  
+  </div>

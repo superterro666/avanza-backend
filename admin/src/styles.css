@@ -1,0 +1,150 @@
+/* You can add global styles to this file, and also import other style files */
+.bubble 
+{
+position: relative;
+width: 30px;
+height: 25px;
+padding: 0px;
+background: #FF373A;
+-webkit-border-radius: 49px;
+-moz-border-radius: 49px;
+border-radius: 49px;
+}
+
+.bubble:after 
+{
+
+position: absolute;
+border-style: solid;
+border-width: 12px 5px 0;
+border-color: #FF373A transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -12px;
+left: 10px;
+}
+.colorBackground{
+    background-color: #448fe4 !important;
+}
+
+.navbar-inverse .navbar-nav .activo{
+    color: #13437A;
+} 
+
+.mTop15{
+    margin-top: 15px !important;
+}
+
+.mBot15{
+    margin-bottom: 15px !important;
+}
+
+.colortxt{
+    color: #448fe4 !important;
+}
+
+.colortxtoscuro{
+    color: #13437A !important;
+}
+
+.claro{
+    color: #4C6481 !important;
+}
+
+.tablaRedonda{
+    color: #448fe4 !important;
+    background-color: #fff !important;
+    border-top: 1px solid #13437A !important;
+    border-top-left-radius: 1px !important;
+    border-top-right-radius: 1px !important;
+}
+
+.table thead th{
+    border-bottom: 2px solid #13437A !important;
+}
+
+.table th{
+    border-top: 1px solid #fff !important;
+}
+
+.table td{
+    vertical-align: middle !important;
+    border-top: 1px solid #6C8EB7;
+}
+
+ul{
+    margin-top: 16px !important;
+}
+
+.rallaMedio{
+    border-right: 1px solid #6C8EB7;
+    padding-right: 17px;
+}
+
+.noPadDer{
+    padding-right: 0px !important;
+}
+
+.noBorLat{
+    border-right: 0px !important;
+    border-left: 0px !important;    
+}
+
+.text-muted{
+    color: #6C8EB7 !important;
+}
+
+.form-control{
+    color: #6C8EB7 !important;
+    border: 1px solid #6C8EB7 !important;
+}
+
+.form-control::placeholder{
+    color: #6C8EB7 !important;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #448fe4;
+    border-color: #448fe4;
+}
+
+.btn-outline-primary {
+    color: #448fe4;
+    border-color: #448fe4;
+}
+
+.mce-panel {
+    border: 0px solid #6C8EB7 !important;
+}
+
+#mceu_13-body{    
+    border: 1px solid #6C8EB7 !important;
+}
+
+#mceu_15 {
+    border-bottom: 1px solid #6C8EB7 !important;
+}
+
+#mceu_23 {
+    border-bottom: 1px solid #6C8EB7 !important;
+}
+
+.mce-menubtn button{
+    color: #6C8EB7 !important;
+}
+
+.mce-menubar .mce-menubtn button span{
+    color: #6C8EB7 !important;
+}
+
+.mce-ico{
+    color: #6C8EB7 !important;
+}
+
+.mce-btn-group:not(:first-child) {
+    border-left: 1px solid #6C8EB7 !important;
+}
+
+
