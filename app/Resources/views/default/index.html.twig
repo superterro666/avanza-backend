@@ -356,58 +356,25 @@
                     <h2>Trabajos de Avanza</h2>
                     <span></span>
                     <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru<br> exercit ation Lorem ipsum dolor sit amet.Veniam quis notru exercit.</p> -->
-                </div>				
-                <!-- <div class="col-xs-12 text-center">
-                        <ul class="portfolio-filters">
-                                <li class="filter active" data-filter="all">all</li>
-                                <li class="filter" data-filter="graphic">Graphic</li>
-                                <li class="filter" data-filter="print">Print</li>
-                                <li class="filter" data-filter="webdesign">webdesign</li>
-                        </ul>						
-                </div> -->
-                <!-- END COL -->
+                </div>		
             </div><!-- END ROW -->
             <div class="row">
                 <ul class="portfolio-items-list">
+                    {% for port in portfolios %}
                     <li class="col-md-4 col-sm-6 col-xs-12  portfolio-item print graphic" data-cat="2">
                         <div class="hover-overlay"> 			
-                            <img class="img-responsive" src="{{ asset('assets/img/portfolio/1.jpg') }}" alt="Portfolio Image">	
-                            <a class="prettyPhoto image_zoom" href="{{asset('assets/img/portfolio/1.jpg') }}" title="Project Image">
+                            <img class="img-responsive" src="{{ asset('uploads/images/') }}{{port.imagen}}" alt="Portfolio Image">	
+                            <a class="prettyPhoto image_zoom" href="{{asset('uploads/images/') }}{{port.imagen}}" title="Project Image">
                                 <div class="item-overlay">										
                                     <div class="overlay-content">
-                                        <h4 class="small-title">Project Title Here</h4>
-                                        <h5>Project Category</h5>
+                                        <h4 class="small-title">{{port.titulo}}</h4>
+                                        <h5>{{port.texto}}</h5>
                                     </div>
                                 </div>	  
                             </a>
                         </div>
-                    </li><!-- END PORTFOLIO IMAGE -->
-                    <li class="col-md-4 col-sm-6 col-xs-12  portfolio-item webdesign" data-cat="2">
-                        <div class="hover-overlay"> 			
-                            <img class="img-responsive" src="{{ asset('assets/img/portfolio/2.jpg') }}" alt="Portfolio Image">	
-                            <a class="prettyPhoto image_zoom" href="assets/img/portfolio/2.jpg" title="Project Image">
-                                <div class="item-overlay">										
-                                    <div class="overlay-content">
-                                        <h4 class="small-title">Project Title Here</h4>
-                                        <h5>Project Category</h5>
-                                    </div>
-                                </div>	  
-                            </a>
-                        </div>
-                    </li><!-- END PORTFOLIO IMAGE -->
-                    <li class="col-md-4 col-sm-6 col-xs-12  portfolio-item print graphic" data-cat="2">
-                        <div class="hover-overlay"> 			
-                            <img class="img-responsive" src="{{ asset('assets/img/portfolio/3.jpg') }}" alt="Portfolio Image">	
-                            <a class="prettyPhoto image_zoom" href="{{ asset('assets/img/portfolio/3.jpg') }}" title="Project Image">
-                                <div class="item-overlay">										
-                                    <div class="overlay-content">
-                                        <h4 class="small-title">Project Title Here</h4>
-                                        <h5>Project Category</h5>
-                                    </div>
-                                </div>	  
-                            </a>
-                        </div>
-                    </li><!-- END PORTFOLIO IMAGE -->	
+                    </li><!-- END PORTFOLIO IMAGE -->  
+                    {% endfor %}
                 </ul>
             </div>
             <!-- END ROW  -->
@@ -711,22 +678,37 @@
                     <span></span>
                 </div>
 
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                    <article class="blog-post">						
-                        <div class="post-img"> <img src="{{ asset('assets/img/blog/blog-1.jpg') }}" alt=""></div>	
-                        <h4>Blog Title Here</h4>					
-                        <!-- BLOG DETAIL --> 
-                        <span class="post-bt">by <span class="text-color-primary">Accede</span></span>
-                        <ul class="post-info">
-                            <li> <i class="fa fa-comments-o"></i>97 </li>
-                            <li> <i class="fa fa-eye"></i>565 </li>
-                            <li> <i class="fa fa-bookmark-o"></i>Web Design </li>
-                            <li> <span class="date font-crimson">28 August</span> </li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru exercit ation </p>
-                        <a class="btn btn-lg btn-blog-bg" href="#">Read more</a>
-                    </article>
-                </div><!--- END COL -->
+                <div class="flexslider testi-slider-blog wow animated fadeInUp" data-wow-delay=".06s">
+                    <ul class="slides">
+                
+                    {% for blog in blogs %}
+                    
+                    <li>
+                        <div class="testi-slider-item">
+                            {# <div class="col-md-4 col-sm-12 col-xs-12"> #}
+                                <article class="blog-post">						
+                                    <div class="post-img"> <img src="{{ asset('uploads/images/') }}{{blog.imagen}}" alt=""></div>	
+                                    <h4>{{blog.titulo}}</h4>					
+                                    <!-- BLOG DETAIL --> 
+                                    <span class="post-bt">by <span class="text-color-primary">AVANZA</span></span>
+                                    <ul class="post-info">
+                                        {# <li> <i class="fa fa-comments-o"></i>97 </li>
+                                        <li> <i class="fa fa-eye"></i>565 </li>
+                                        <li> <i class="fa fa-bookmark-o"></i>Web Design </li> #}
+                                        <li> <span class="date font-crimson">{{blog.fecha | date("d/m")}}</span> </li>
+                                    </ul>
+                                    <p>{{blog.texto|striptags|length > 50 ? blog.texto|striptags|slice(0, 50) ~ '...' : blog.texto|striptags }}</p>
+                                    <a class="btn btn-lg btn-blog-bg" href="#">Leer Mas</a>
+                                </article>
+                            {# </div><!--- END COL --> #}
+
+                        </div>
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+            </div>
 
             </div><!--- END ROW -->
         </div><!--- END CONTAINER -->
@@ -772,14 +754,13 @@
                     </div>
                 </div><!-- END COL -->						
                 <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight">
-                    <div class="contact">
-                        
-                            <div class="row">
-                                {{ form_start(form) }}
-                                {{ form_widget(form) }}
-                                {{ form_end(form) }}
-                            </div>
-                       
+                    <div class="contact">                        
+                        <div class="row">
+                            {{ form_start(form) }}
+                            {{ form_widget(form) }} 
+                            <p class="ver">Ver <a href="{{path("politica")}}">Politica de Privacidad</a></p>
+                            {{ form_end(form) }}
+                        </div>                       
                     </div>
                 </div><!-- END COL -->
             </div><!--- END ROW -->				

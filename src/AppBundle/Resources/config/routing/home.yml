@@ -7,6 +7,9 @@ aviso:
 politica:
     path: /politica
     defaults: { _controller: AppBundle:Home:politica }
+cookies:
+    path: /cookies
+    defaults: { _controller: AppBundle:Home:cookies }
 
     
     

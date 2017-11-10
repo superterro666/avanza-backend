@@ -9,7 +9,7 @@ export class UploadService {
   private url: string;
   private action: string;
   constructor(private _http: HttpClient, private _login: LoginService) {
-    this.url =  'http://localhost/avanza/web/app_dev.php/upload/';
+    this.url =  'http://localhost/avanza-backend/web/app_dev.php/upload/';
    }
 
   makeFileRequest(id, files: Array<File>, name: string, action: string) {

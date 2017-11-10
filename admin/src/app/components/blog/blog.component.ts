@@ -41,13 +41,13 @@ export class BlogComponent implements OnInit {
          texto: this.texto
       };
 
-      console.log(blog);
       this._blog.setBlog(blog);
       this.blog.id = 0;
       this.blog.titulo = '';
       this._tiny.update('');
 
       this._blog.listaBlog$.subscribe(data => {
+        console.log(data);
       this.blogs = data;
       this._upload.makeFileRequest(this.blogs[0]['id'], this.filesToUpload, 'imagen', 'blog')
       .then((result: any) => {

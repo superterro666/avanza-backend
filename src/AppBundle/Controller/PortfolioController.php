@@ -174,7 +174,7 @@ class PortfolioController extends Controller {
             $url = 'uploads/images/';
             $img = $fileTask->getExtension($files, $url);
             $image->load( $url. $img);
-            $image->resize(330, 330);
+            $image->resize(450, 450);
             $image->save($url . $img);
             
             try{

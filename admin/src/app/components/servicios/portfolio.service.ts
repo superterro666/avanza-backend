@@ -7,7 +7,7 @@ import { LoginService } from './login.service';
 
 @Injectable()
 export class PortfolioService {
-  private url = 'http://localhost/avanza/web/app_dev.php';
+  private url = 'http://localhost/avanza-backend/web/app_dev.php';
   private listaPortfolioSource = new Subject<any>();
   public listaPortfolio$ = this.listaPortfolioSource.asObservable();
   private portfolioSource = new Subject<any>();

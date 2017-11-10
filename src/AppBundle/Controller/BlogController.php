@@ -31,7 +31,7 @@ class BlogController extends Controller {
                     $em->persist($blog);
                     $em->flush();
 
-                    $dql = "SELECT b.titulo, b.texto, b.id FROM EntityBundle:Blog b ORDER BY b.fecha DESC";
+                    $dql = "SELECT b.titulo, b.texto, b.id, b.imagen FROM EntityBundle:Blog b ORDER BY b.fecha DESC";
 
                     $query = $em->createQuery($dql);
                     $result = $query->getResult();

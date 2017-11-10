@@ -271,4 +271,33 @@ class Portfolio
     {
         return $this->imagen;
     }
+    /**
+     * @var string
+     */
+    private $texto;
+
+
+    /**
+     * Set texto
+     *
+     * @param string $texto
+     *
+     * @return Portfolio
+     */
+    public function setTexto($texto)
+    {
+        $this->texto = $texto;
+
+        return $this;
+    }
+
+    /**
+     * Get texto
+     *
+     * @return string
+     */
+    public function getTexto()
+    {
+        return $this->texto;
+    }
 }
