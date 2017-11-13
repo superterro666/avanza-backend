@@ -10,6 +10,9 @@ politica:
 cookies:
     path: /cookies
     defaults: { _controller: AppBundle:Home:cookies }
+readBlog:
+    path: /read/{id}
+    defaults: { _controller: AppBundle:Home:readBlog, id:null }
 
     
     
