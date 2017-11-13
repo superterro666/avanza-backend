@@ -58,13 +58,12 @@ class HomeController extends Controller {
      
         $form->handleRequest($request);
 
-=======
 
         
      
         $form->handleRequest($request);
 
->>>>>>> 8b95fbb3ae3b9181a9dcad2e953007fd462661a2
+
         if ($form->isSubmitted() && $form->isValid()) {        
             $contacto = $form->getData();
             $contacto->setFecha(new \Datetime());
