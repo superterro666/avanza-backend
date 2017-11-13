@@ -101,7 +101,7 @@ class BlogController extends Controller {
 
                         $em->remove($blog);
                         $em->flush();
-                        $dql = "SELECT b.titulo, b.texto, b.id FROM EntityBundle:Blog b ORDER BY b.fecha DESC";
+                        $dql = "SELECT b.titulo, b.texto, b.id, b.imagen FROM EntityBundle:Blog b ORDER BY b.fecha DESC";
 
                         $query = $em->createQuery($dql);
                         $result = $query->getResult();
@@ -124,7 +124,7 @@ class BlogController extends Controller {
             $id = $request->query->get('id') ?? false;
             if ($id) {
                 $em = $this->getDoctrine()->getManager();
-                $dql = "SELECT b.titulo, b.texto, b.id FROM EntityBundle:Blog b WHERE b.id =:id";
+                $dql = "SELECT b.titulo, b.texto, b.id, b.imagen, date_format(b.fecha, '%d-%m') as fecha FROM EntityBundle:Blog b WHERE b.id =:id";
                 try {
                     $query = $em->createQuery($dql)->setParameter('id', $id);
                     $result = $query->getOneOrNullResult();

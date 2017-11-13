@@ -27,6 +27,17 @@ class HomeController extends Controller {
         return $this->render(':default:cookies.html.twig');
     }
 
+    public function readBlogAction(Request $request){
+        $id  = $request->get('id');
+        $em = $this->getDoctrine()->getManager();
+        $blog = $em->getRepository('EntityBundle:Blog')->find($id);
+        
+
+
+
+        return $this->render(':default:readBlog.html.twig', array('blog'=>$blog));
+    }
+
     public function indexAction(Request $request){
         $contacto = new Contacto();
         $em = $this->getDoctrine()->getManager();
@@ -45,24 +56,14 @@ class HomeController extends Controller {
                     'Seguridad y control' => 'seguridad'),
                 'attr'=>array('class'=>'form-control')))
             ->add('contenido',TextareaType::class, array('attr'=>array('class'=>'form-control areaForm','minlength'=>3)))  
-
             ->add('Acepto_la_Politica_de_Privacidad', CheckBoxType::class, array('required'=> true, 'attr'=>array('class'=>'form-control politicaForm'),'label_attr'=> array('class'=> 'etiqueta', 'id'=>'etiqueta')))  
-
-           
             ->add('Enviar', SubmitType::class, array('attr'=>array('class'=>'form-control btForm','minlength'=>3)))
             ->getForm();
     
         $form->remove('fecha'); 
         $form->remove('estado'); 
-
      
         $form->handleRequest($request);
-
-
-        
-     
-        $form->handleRequest($request);
-
 
         if ($form->isSubmitted() && $form->isValid()) {        
             $contacto = $form->getData();
@@ -99,35 +100,6 @@ class HomeController extends Controller {
         $em = $this->getDoctrine()->getManager();
         $portfolio = $em->getRepository('EntityBundle:Portfolio')->findAll();
         return $portfolio;
-    }
-
-    // private function getBlogs(Request $request){
-    //     $em = $this->getDoctrine()->getManager();
-    //     $blogs = $em->getRepository('EntityBundle:Blog')->findAll();
-    
-    //     $page = $request->query->getInt("page", 1);
-    //     $paginator = $this->get("knp_paginator");
-    //     $items_per_page = 3;
-    
-    //     $pagination = $paginator->paginate($blogs, $page, $items_per_page);
-    //     $total_items_count = $pagintaion->getTotalItemCount();
-        
-    
-    //     $data = array(
-    //         "status" => 'succes',
-    //         "total_items_count"=> $total_items_count,
-    //         "page_actual" => $page,
-    //         "items_per_page" => $items_per_page,
-    //         "total_pages" => ceil($total_items_count/$items_per_page),
-    //         "data" => $pagination
-    //     );
-    
-    //     return $data;
-    // }
- 
-
-    
-    
-  
+    } 
 
 }
