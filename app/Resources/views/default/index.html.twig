@@ -698,7 +698,7 @@
                                         <li> <span class="date font-crimson">{{blog.fecha | date("d/m")}}</span> </li>
                                     </ul>
                                     <p>{{blog.texto|striptags|length > 50 ? blog.texto|striptags|slice(0, 50) ~ '...' : blog.texto|striptags }}</p>
-                                    <a class="btn btn-lg btn-blog-bg" href="#">Leer Mas</a>
+                                    <a class="btn btn-lg btn-blog-bg" href="{{path('readBlog', { 'id':blog.id }) }}">Leer Mas</a>
                                 </article>
                             {# </div><!--- END COL --> #}
 

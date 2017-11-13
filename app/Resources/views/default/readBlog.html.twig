@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    
+<div class="row marSup80 marInf">
+    <div class="col-md-4 centImagen">
+        <img class="imgBlog" src="http://localhost/avanza-backend/web/uploads/images/{{blog.imagen}}">
+    </div>
+
+    <div class="col-md-8 ">
+        <div class="col-md-10 flotarI">
+            <h3>{{blog.titulo | upper}}</h3>
+        </div>
+        <div *ngIf="blog.fecha" class="col-md-2 flotarI">
+            <h3>{{blog.fecha | date("d/m")}}</h3>
+        </div>
+
+        <div class="col-md-12 marSup20">
+            <div>{{blog.texto | raw}}</div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
