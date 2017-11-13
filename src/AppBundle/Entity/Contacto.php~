@@ -167,5 +167,62 @@ class Contacto
     {
         return $this->servicio;
     }
-}
+    /**
+     * @var boolean
+     */
+    private $estado;
 
+    /**
+     * @var \DateTime
+     */
+    private $fecha;
+
+
+    /**
+     * Set estado
+     *
+     * @param boolean $estado
+     *
+     * @return Contacto
+     */
+    public function setEstado($estado)
+    {
+        $this->estado = $estado;
+
+        return $this;
+    }
+
+    /**
+     * Get estado
+     *
+     * @return boolean
+     */
+    public function getEstado()
+    {
+        return $this->estado;
+    }
+
+    /**
+     * Set fecha
+     *
+     * @param \DateTime $fecha
+     *
+     * @return Contacto
+     */
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+
+        return $this;
+    }
+
+    /**
+     * Get fecha
+     *
+     * @return \DateTime
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+}

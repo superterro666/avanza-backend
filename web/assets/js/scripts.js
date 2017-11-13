@@ -74,6 +74,16 @@ Version      : 1.0
 				nextText: "<i class='fa fa-long-arrow-right'></i>"
 			});
 		});
+		$(window).load(function () {
+			$('.testi-slider-blog').flexslider({
+				animation: 'slide',
+				prevText: "<i class='fa fa-long-arrow-left'></i>",
+				nextText: "<i class='fa fa-long-arrow-right'></i>",
+				itemWidth: 210,
+				minItems: 1,
+				maxItems: 3
+			});
+		});
 		/*END TESTIMONIAL JS*/
 
 		/*START COUNDOWN JS*/

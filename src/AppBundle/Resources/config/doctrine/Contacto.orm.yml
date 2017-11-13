@@ -24,6 +24,9 @@ AppBundle\Entity\Contacto:
             type: string
             length: 255
             
+        Acepto_la_Politica_de_Privacidad:
+            type: boolean
+            
         estado:
             type: boolean
             

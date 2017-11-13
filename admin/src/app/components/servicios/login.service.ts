@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 @Injectable()
 export class LoginService {
 
-  private url_base = 'http://localhost/avanza/web/app_dev.php/login';
-  private url_checktoken = 'http://localhost/avanza/web/app_dev.php/checktoken';
+  private url_base = 'http://localhost/avanza-backend/web/app_dev.php/login';
+  private url_checktoken = 'http://localhost/avanza-backend/web/app_dev.php/checktoken';
   private token: string;
   private identity: any;
 

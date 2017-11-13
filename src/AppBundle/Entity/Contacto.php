@@ -225,4 +225,33 @@ class Contacto
     {
         return $this->fecha;
     }
+    /**
+     * @var boolean
+     */
+    private $Acepto_la_Politica_de_Privacidad;
+
+
+    /**
+     * Set aceptoLaPoliticaDePrivacidad
+     *
+     * @param boolean $aceptoLaPoliticaDePrivacidad
+     *
+     * @return Contacto
+     */
+    public function setAceptoLaPoliticaDePrivacidad($aceptoLaPoliticaDePrivacidad)
+    {
+        $this->Acepto_la_Politica_de_Privacidad = $aceptoLaPoliticaDePrivacidad;
+
+        return $this;
+    }
+
+    /**
+     * Get aceptoLaPoliticaDePrivacidad
+     *
+     * @return boolean
+     */
+    public function getAceptoLaPoliticaDePrivacidad()
+    {
+        return $this->Acepto_la_Politica_de_Privacidad;
+    }
 }

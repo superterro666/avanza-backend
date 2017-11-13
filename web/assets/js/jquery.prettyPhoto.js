@@ -577,10 +577,10 @@
 			
 				while (!fitting){
 					if((pp_containerWidth > windowWidth)){
-						imageWidth = (windowWidth - 200);
+						imageWidth = (windowWidth - 80);
 						imageHeight = (height/width) * imageWidth;
 					}else if((pp_containerHeight > windowHeight)){
-						imageHeight = (windowHeight - 200);
+						imageHeight = (windowHeight - 80);
 						imageWidth = (width/height) * imageHeight;
 					}else{
 						fitting = true;

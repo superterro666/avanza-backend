@@ -7,7 +7,7 @@ import { LoginService } from './login.service';
 
 @Injectable()
 export class MensajesService {
- private url = 'http://localhost/avanza/web/app_dev.php';
+ private url = 'http://localhost/avanza-backend/web/app_dev.php';
 
   private listaMensajeSource = new Subject<any>();
   public listaMensaje$ = this.listaMensajeSource.asObservable();
