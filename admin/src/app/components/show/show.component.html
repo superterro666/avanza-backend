@@ -1,12 +1,18 @@
-<div class="col-8">
-<img  src="http://localhost/avanza/web/uploads/images/{{datos.imagen}}">    
-<h3>{{datos.titulo}}</h3>
+<div class="row marSup50">
+    <div class="col-md-4">
+        <img src="http://localhost/avanza-backend/web/uploads/images/{{datos.imagen}}">
+    </div>
 
-<div [innerHTML]="datos.texto"></div>
+    <div class="col-md-8 ">
+        <div class="col-md-10 flotarI">
+            <h3>{{datos.titulo | uppercase}}</h3>
+        </div>
+        <div *ngIf="datos.fecha" class="col-md-2 flotarI">
+            <h3>{{datos.fecha}}</h3>
+        </div>
 
-<p>{{datos.fecha}}</p>
-
-
-
-
+        <div class="col-md-12 marSup20">
+            <div [innerHTML]="datos.texto"></div>
+        </div>
+    </div>
 </div>

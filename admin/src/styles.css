@@ -147,4 +147,23 @@ ul{
     border-left: 1px solid #6C8EB7 !important;
 }
 
+.flotarI{
+    float: left !important;
+}
+
+.txtFecha{
+    text-align: center !important;
+    margin-top: 5px !important;
+    font-size: 20px !important;
+}
+
+.marSup50{
+    margin-top: 50px !important;
+}
+
+.marSup20{
+    margin-top: 20px !important;
+    display: inline-block !important;
+}
+
 

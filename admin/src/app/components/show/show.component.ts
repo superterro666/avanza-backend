@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PortfolioService } from '../servicios/portfolio.service';
 import { BlogService } from '../servicios/blog.service';
+// import { DatePipe } from '@angular/core';
 
 @Component({
   selector: 'app-show',
@@ -18,23 +19,25 @@ export class ShowComponent implements OnInit {
   private id: number;
   private tipo: string;
   constructor(private route: ActivatedRoute, private router: Router, private _portfolio: PortfolioService, private _blog: BlogService) {
-        this.route.params.subscribe(params => {
-        this.id = params['id'];
-        this.tipo = params['tipo'];
+    this.route.params.subscribe(params => {
+      this.id = params['id'];
+      this.tipo = params['tipo'];
 
-        if (this.tipo === 'portfolio') {
-          this._portfolio.getPortfolio(this.id);
-          this._portfolio.portfolio$.subscribe(data => {
+      if (this.tipo === 'portfolio') {
+        this._portfolio.getPortfolio(this.id);
+        this._portfolio.portfolio$.subscribe(data => {
           this.datos = data;
-          });
-        } else {
-          this._blog.getBlog(this.id);
-          this._blog.blog$.subscribe(data => {
+          console.log(data);
+        });
+      } else {
+        this._blog.getBlog(this.id);
+        this._blog.blog$.subscribe(data => {
           this.datos = data;
-          });
-        }
-   });
-
+          console.log(data);
+        });
+      }
+      console.log(this.datos);
+    });
   }
 
   ngOnInit() {
