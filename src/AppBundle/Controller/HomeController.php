@@ -45,21 +45,16 @@ class HomeController extends Controller {
                     'Seguridad y control' => 'seguridad'),
                 'attr'=>array('class'=>'form-control')))
             ->add('contenido',TextareaType::class, array('attr'=>array('class'=>'form-control areaForm','minlength'=>3)))  
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             ->add('Acepto_la_Politica_de_Privacidad', CheckBoxType::class, array('required'=> true, 'attr'=>array('class'=>'form-control politicaForm'),'label_attr'=> array('class'=> 'etiqueta', 'id'=>'etiqueta')))  
-=======
-            ->add('Acepto_la_Politica_de_Privacidad', CheckBoxType::class, array('mapped' => false,'attr'=>array('class'=>'form-control politicaForm'),'label_attr'=> array('class'=> 'etiqueta', 'id'=>'etiqueta')))  
->>>>>>> 8b95fbb3ae3b9181a9dcad2e953007fd462661a2
-=======
-            ->add('Acepto_la_Politica_de_Privacidad', CheckBoxType::class, array('required'=>true,'attr'=>array('class'=>'form-control politicaForm'),'label_attr'=> array('class'=> 'etiqueta', 'id'=>'etiqueta')))  
->>>>>>> 3fcdcf3be38274166a087f28c7b4ee81a5b1799c
+
+           
             ->add('Enviar', SubmitType::class, array('attr'=>array('class'=>'form-control btForm','minlength'=>3)))
             ->getForm();
     
         $form->remove('fecha'); 
         $form->remove('estado'); 
-<<<<<<< HEAD
+
      
         $form->handleRequest($request);
 
