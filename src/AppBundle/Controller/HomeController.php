@@ -45,7 +45,7 @@ class HomeController extends Controller {
                     'Seguridad y control' => 'seguridad'),
                 'attr'=>array('class'=>'form-control')))
             ->add('contenido',TextareaType::class, array('attr'=>array('class'=>'form-control areaForm','minlength'=>3)))  
-            ->add('Acepto_la_Politica_de_Privacidad', CheckBoxType::class, array('mapped' => false,'attr'=>array('class'=>'form-control politicaForm'),'label_attr'=> array('class'=> 'etiqueta', 'id'=>'etiqueta')))  
+            ->add('Acepto_la_Politica_de_Privacidad', CheckBoxType::class, array('required'=>true,'attr'=>array('class'=>'form-control politicaForm'),'label_attr'=> array('class'=> 'etiqueta', 'id'=>'etiqueta')))  
             ->add('Enviar', SubmitType::class, array('attr'=>array('class'=>'form-control btForm','minlength'=>3)))
             ->getForm();
     
