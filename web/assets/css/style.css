@@ -1908,6 +1908,40 @@ form .ver{
 }
 
 
+.flotarI{
+    float: left !important;
+}
+
+.txtFecha{
+    text-align: center !important;
+    margin-top: 5px !important;
+    font-size: 20px !important;
+}
+
+.marSup80{
+    margin-top: 100px !important;
+}
+
+.marSup20{
+    margin-top: 20px !important;
+    display: inline-block !important;
+}
+
+.marInf{
+    margin-bottom: 25% !important;
+}
+
+.centImagen{
+    text-align: center !important;
+}
+
+@media only screen and (max-width: 768px){ 
+    
+    .centImagen{
+        text-align: center !important;        
+        padding: 15px!important;
+    }
+}
 /*
 * ----------------------------------------------------------------------------------------
 * 19.END MODIFICATORS
